@@ -384,8 +384,14 @@
                 panels.forEach(p => p.classList.remove("active"));
 
                 tab.classList.add("active");
-                const targetPanel = document.getElementById(`tab-\${tab.getAttribute("data-tab")}`);
+                const targetTab = tab.getAttribute("data-tab");
+                const targetPanel = document.getElementById(`tab-${targetTab}`);
                 targetPanel.classList.add("active");
+                
+                // Force Chart.js to resize to avoid layout squishing on hidden tabs
+                if (targetTab === 'pheno' && chart1) chart1.resize();
+                if (targetTab === 'maturity' && chart2) chart2.resize();
+                if (targetTab === 'winewise' && chart3) chart3.resize();
             });
         });
 
@@ -443,7 +449,7 @@
             const data = simulationData[fundo][variety];
             
             // Pheno
-            document.getElementById("pheno-threshold").textContent = `\${data.pheno.threshold} GDD`;
+            document.getElementById("pheno-threshold").textContent = `${data.pheno.threshold} GDD`;
             if (variety === 'cs') {
                 document.getElementById("pheno-biofix").textContent = "01-Ago (T0 Latitudinal)";
                 document.getElementById("pheno-pred").textContent = fundo === 'lourdes' ? "DOY 264 (21-Sept)" : fundo === 'qseca' ? "DOY 269 (26-Sept)" : "DOY 266 (23-Sept)";
@@ -454,10 +460,10 @@
 
             // Maturity
             const len = data.maturity.brix.length;
-            document.getElementById("mat-brix").textContent = `\${data.maturity.brix[len-1]} °Bx`;
-            document.getElementById("mat-ph").textContent = `\${data.maturity.ph[len-1]}`;
-            document.getElementById("mat-acidez").textContent = `\${data.maturity.acidity[len-1]} g/L`;
-            document.getElementById("mat-peso").textContent = `\${data.maturity.peso[len-1]} g`;
+            document.getElementById("mat-brix").textContent = `${data.maturity.brix[len-1]} °Bx`;
+            document.getElementById("mat-ph").textContent = `${data.maturity.ph[len-1]}`;
+            document.getElementById("mat-acidez").textContent = `${data.maturity.acidity[len-1]} g/L`;
+            document.getElementById("mat-peso").textContent = `${data.maturity.peso[len-1]} g`;
         }
 
         // Initialize Charts
