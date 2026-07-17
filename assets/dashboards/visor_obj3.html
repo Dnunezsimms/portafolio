@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor Integrado de Fenología & Madurez — Vendimia 5.0 (Datos Simulados)</title>
+    <!-- Google Fonts & CDN libraries -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-main: #0b0e0c;
+            --bg-alt: #131814;
+            --card-bg: rgba(19, 24, 20, 0.6);
+            --card-border: rgba(30, 63, 32, 0.25);
+            --text-main: #f2f4f2;
+            --text-muted: #8b968d;
+            --primary: #1e3f20;
+            --secondary: #6b1d2f;
+            --accent: #ec4899;
+            --accent-green: #34d399;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        header {
+            max-width: 1200px;
+            margin: 0 auto 2rem auto;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        h1 span {
+            color: var(--secondary);
+        }
+
+        .header-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            background: rgba(30, 63, 32, 0.15);
+            border: 1px solid var(--card-border);
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Filter Controls */
+        .controls-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 1.5rem;
+            border-radius: 16px;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .control-group label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+        }
+
+        .control-group select {
+            background-color: var(--bg-alt);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .control-group select:focus {
+            outline: none;
+            border-color: var(--accent-green);
+        }
+
+        /* Tabs navigation */
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid var(--card-border);
+            gap: 1rem;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            padding: 0.8rem 1.5rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-main);
+        }
+
+        .tab-btn.active {
+            color: var(--accent-green);
+            border-color: var(--accent-green);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Cards and Charts */
+        .chart-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            min-height: 400px;
+        }
+
+        .chart-card h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .stats-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.5rem;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .stat-value {
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        th {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            .tab-content.active {
+                grid-template-columns: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>Vendimia 5.0 — <span>Visor Objetivo 3</span></h1>
+            <p style="color: var(--text-muted); margin-top: 4px;">Auditoría Bioclimática y de Madurez (Datos de Referencia Simulados)</p>
+        </div>
+        <div class="header-meta">
+            🔒 Sandbox de Auditoría (Resguardo Privado)
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Controls -->
+        <div class="controls-card">
+            <div class="control-group">
+                <label for="fundo-select">Fundo / Viñedo</label>
+                <select id="fundo-select">
+                    <option value="lourdes">Lourdes (Pencahue)</option>
+                    <option value="qseca">Quebrada Seca (Limarí)</option>
+                    <option value="nilahue">Nilahue (Lolol)</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="variety-select">Variedad</label>
+                <select id="variety-select">
+                    <option value="cs">Cabernet Sauvignon</option>
+                    <option value="ch">Chardonnay</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="pheno">🌱 Fenología & Biofix</button>
+            <button class="tab-btn" data-tab="maturity">🍇 Madurez Técnica</button>
+            <button class="tab-btn" data-tab="winewise">☁️ WineWise-RS (ERA5 Validation)</button>
+        </div>
+
+        <!-- Tab contents -->
+        <!-- Tab 1: Phenology -->
+        <div class="tab-content active" id="tab-pheno">
+            <div class="chart-card">
+                <h2>Acumulación Térmica (GDD) y Umbral de Brotación</h2>
+                <div style="height: 320px; position: relative;">
+                    <canvas id="phenoChart"></canvas>
+                </div>
+            </div>
+            <div class="stats-card">
+                <h3>Resumen de Biofix</h3>
+                <div class="stat-item">
+                    <span class="stat-label">Biofix Latitudinal Predictivo:</span>
+                    <span class="stat-value" id="pheno-biofix">01-Ago (T0 Latitudinal)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">GDD Brotación Requerido:</span>
+                    <span class="stat-value" id="pheno-threshold">350 GDD</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">DOY Brotación Predicho:</span>
+                    <span class="stat-value" id="pheno-pred">DOY 264 (21-Sept)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Desviación vs Observado:</span>
+                    <span class="stat-value" style="color:var(--accent-green);">-2.4 días</span>
+                </div>
+                <p class="text-muted" style="font-size:0.8rem; line-height:1.4; border-top:1px solid var(--card-border); padding-top: 1rem;">
+                    *Nota: El Biofix predictivo se calcula en base a la latitud del viñedo, eliminando el sesgo de leakage por ajuste retrospectivo directo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Tab 2: Maturity -->
+        <div class="tab-content" id="tab-maturity">
+            <div class="chart-card">
+                <h2>Evolución de Sólidos Solubles (°Brix) e Hidratación</h2>
+                <div style="height: 320px; position: relative;">
+                    <canvas id="maturityChart"></canvas>
+                </div>
+            </div>
+            <div class="stats-card">
+                <h3>Indicadores Técnicos</h3>
+                <div class="stat-item">
+                    <span class="stat-label">Brix Máximo Recomendado:</span>
+                    <span class="stat-value" id="mat-brix">24.5 °Bx</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">pH Objetivo:</span>
+                    <span class="stat-value" id="mat-ph">3.45</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Acidez Tartárica:</span>
+                    <span class="stat-value" id="mat-acidez">4.8 g/L</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Peso de Baya Promedio:</span>
+                    <span class="stat-value" id="mat-peso">1.18 g</span>
+                </div>
+                <p class="text-muted" style="font-size:0.8rem; line-height:1.4; border-top:1px solid var(--card-border); padding-top: 1rem;">
+                    *Curvas promedio espacial por fundo. Las muestras de cuartel se unifican para control de calidad.
+                </p>
+            </div>
+        </div>
+
+        <!-- Tab 3: WineWise ERA5 Validation -->
+        <div class="tab-content" id="tab-winewise">
+            <div class="chart-card">
+                <h2>ERA5-Land vs Observaciones de Estación Local</h2>
+                <div style="height: 320px; position: relative;">
+                    <canvas id="winewiseChart"></canvas>
+                </div>
+            </div>
+            <div class="stats-card">
+                <h3>Métricas de Validación (Estudio WineWise-RS)</h3>
+                <div class="stat-item">
+                    <span class="stat-label">Error Absoluto Medio (MAE Temp):</span>
+                    <span class="stat-value">0.86 °C</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Coeficiente de Determinación (R²):</span>
+                    <span class="stat-value">0.91</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Sesgo Medio (Bias):</span>
+                    <span class="stat-value">+0.14 °C</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Gaps Rellenados (Gap-Filling):</span>
+                    <span class="stat-value">4.2%</span>
+                </div>
+                <p class="text-muted" style="font-size:0.8rem; line-height:1.4; border-top:1px solid var(--card-border); padding-top: 1rem;">
+                    Evaluación sistemática de series horarias del periodo de reanálisis para garantizar la viabilidad del reanálisis en zonas cordilleranas.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching logic
+        const tabs = document.querySelectorAll(".tab-btn");
+        const panels = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                tabs.forEach(t => t.classList.remove("active"));
+                panels.forEach(p => p.classList.remove("active"));
+
+                tab.classList.add("active");
+                const targetPanel = document.getElementById(`tab-\${tab.getAttribute("data-tab")}`);
+                targetPanel.classList.add("active");
+            });
+        });
+
+        // Chart definitions
+        const ctxPheno = document.getElementById('phenoChart').getContext('2d');
+        const ctxMaturity = document.getElementById('maturityChart').getContext('2d');
+        const ctxWineWise = document.getElementById('winewiseChart').getContext('2d');
+
+        // Dynamic simulated dataset based on filters
+        const simulationData = {
+            lourdes: {
+                cs: {
+                    pheno: { labels: ['01-Ago', '15-Ago', '01-Sept', '15-Sept', '01-Oct', '15-Oct'], observed: [0, 45, 120, 240, 390, 560], observed2: [0, 60, 160, 290, 440, 610], threshold: 350 },
+                    maturity: { labels: ['05-Ene', '15-Ene', '25-Ene', '05-Feb', '15-Feb', '25-Feb', '05-Mar'], brix: [14.2, 16.5, 19.1, 21.3, 23.1, 24.2, 24.5], acidity: [12.4, 9.8, 7.5, 6.1, 5.2, 4.8, 4.6], ph: [2.9, 3.1, 3.25, 3.35, 3.42, 3.45, 3.46], peso: [0.95, 1.05, 1.12, 1.16, 1.18, 1.18, 1.17] },
+                    winewise: { x: [10.2, 12.4, 15.1, 18.2, 21.4, 23.5, 14.5, 16.2, 19.8, 22.1], y: [10.5, 12.1, 14.8, 18.6, 21.0, 23.9, 14.2, 16.5, 20.1, 21.9] }
+                },
+                ch: {
+                    pheno: { labels: ['01-Ago', '15-Ago', '01-Sept', '15-Sept', '01-Oct', '15-Oct'], observed: [0, 60, 155, 290, 460, 640], observed2: [0, 75, 190, 340, 520, 710], threshold: 280 },
+                    maturity: { labels: ['05-Ene', '15-Ene', '25-Ene', '05-Feb', '15-Feb', '25-Feb'], brix: [16.1, 18.2, 20.3, 21.8, 22.4, 22.6], acidity: [9.5, 7.8, 6.2, 5.5, 5.1, 4.9], ph: [3.1, 3.22, 3.28, 3.32, 3.35, 3.36], peso: [1.12, 1.18, 1.22, 1.25, 1.25, 1.24] },
+                    winewise: { x: [12.1, 14.2, 16.8, 19.5, 22.0, 24.1, 15.2, 17.5, 20.2, 22.5], y: [12.3, 13.9, 16.5, 19.9, 21.8, 24.5, 14.9, 17.8, 20.5, 22.2] }
+                }
+            },
+            qseca: {
+                cs: {
+                    pheno: { labels: ['01-Ago', '15-Ago', '01-Sept', '15-Sept', '01-Oct', '15-Oct'], observed: [0, 30, 95, 195, 320, 480], observed2: [0, 40, 110, 215, 355, 520], threshold: 350 },
+                    maturity: { labels: ['05-Ene', '15-Ene', '25-Ene', '05-Feb', '15-Feb', '25-Feb', '05-Mar'], brix: [13.1, 15.2, 17.5, 19.8, 21.5, 23.0, 23.6], acidity: [14.1, 11.5, 9.2, 7.8, 6.8, 6.0, 5.5], ph: [2.8, 2.95, 3.10, 3.20, 3.28, 3.33, 3.35], peso: [0.88, 0.96, 1.02, 1.06, 1.08, 1.09, 1.08] },
+                    winewise: { x: [9.1, 11.2, 13.5, 16.2, 19.1, 21.2, 12.5, 14.2, 17.1, 19.8], y: [9.3, 10.9, 13.2, 16.5, 18.8, 21.5, 12.2, 14.5, 17.4, 19.5] }
+                },
+                ch: {
+                    pheno: { labels: ['01-Ago', '15-Ago', '01-Sept', '15-Sept', '01-Oct', '15-Oct'], observed: [0, 45, 120, 240, 390, 560], observed2: [0, 55, 140, 270, 430, 600], threshold: 280 },
+                    maturity: { labels: ['05-Ene', '15-Ene', '25-Ene', '05-Feb', '15-Feb', '25-Feb'], brix: [15.2, 17.1, 19.2, 20.8, 21.5, 21.8], acidity: [10.2, 8.5, 7.0, 6.1, 5.7, 5.4], ph: [2.95, 3.08, 3.16, 3.21, 3.24, 3.26], peso: [1.02, 1.08, 1.12, 1.15, 1.15, 1.14] },
+                    winewise: { x: [10.5, 12.8, 15.2, 17.9, 20.5, 22.8, 13.1, 15.2, 18.1, 20.6], y: [10.7, 12.5, 14.9, 18.2, 20.1, 23.2, 12.8, 15.5, 18.4, 20.3] }
+                }
+            },
+            nilahue: {
+                cs: {
+                    pheno: { labels: ['01-Ago', '15-Ago', '01-Sept', '15-Sept', '01-Oct', '15-Oct'], observed: [0, 40, 110, 220, 360, 530], observed2: [0, 55, 145, 265, 415, 585], threshold: 350 },
+                    maturity: { labels: ['05-Ene', '15-Ene', '25-Ene', '05-Feb', '15-Feb', '25-Feb', '05-Mar'], brix: [13.8, 16.1, 18.5, 20.7, 22.4, 23.7, 24.1], acidity: [13.2, 10.5, 8.2, 6.9, 5.9, 5.3, 5.0], ph: [2.85, 3.02, 3.18, 3.28, 3.35, 3.39, 3.41], peso: [0.92, 1.01, 1.08, 1.12, 1.14, 1.14, 1.13] },
+                    winewise: { x: [9.8, 11.9, 14.4, 17.2, 20.2, 22.3, 13.6, 15.4, 18.6, 20.9], y: [10.1, 11.6, 14.1, 17.6, 19.8, 22.7, 13.3, 15.7, 18.9, 20.7] }
+                },
+                ch: {
+                    pheno: { labels: ['01-Ago', '15-Ago', '01-Sept', '15-Sept', '01-Oct', '15-Oct'], observed: [0, 55, 140, 270, 430, 600], observed2: [0, 70, 175, 315, 485, 665], threshold: 280 },
+                    maturity: { labels: ['05-Ene', '15-Ene', '25-Ene', '05-Feb', '15-Feb', '25-Feb'], brix: [15.8, 17.8, 19.9, 21.4, 22.0, 22.2], acidity: [9.9, 8.1, 6.6, 5.8, 5.4, 5.2], ph: [3.05, 3.17, 3.23, 3.27, 3.30, 3.31], peso: [1.08, 1.14, 1.18, 1.21, 1.21, 1.20] },
+                    winewise: { x: [11.4, 13.6, 16.1, 18.8, 21.4, 23.6, 14.4, 16.6, 19.4, 21.7], y: [11.6, 13.3, 15.8, 19.2, 21.0, 24.0, 14.1, 16.9, 19.7, 21.4] }
+                }
+            }
+        };
+
+        // DOM elements
+        const fundoSelect = document.getElementById("fundo-select");
+        const varietySelect = document.getElementById("variety-select");
+
+        // Helper stats update
+        function updateStats(fundo, variety) {
+            const data = simulationData[fundo][variety];
+            
+            // Pheno
+            document.getElementById("pheno-threshold").textContent = `\${data.pheno.threshold} GDD`;
+            if (variety === 'cs') {
+                document.getElementById("pheno-biofix").textContent = "01-Ago (T0 Latitudinal)";
+                document.getElementById("pheno-pred").textContent = fundo === 'lourdes' ? "DOY 264 (21-Sept)" : fundo === 'qseca' ? "DOY 269 (26-Sept)" : "DOY 266 (23-Sept)";
+            } else {
+                document.getElementById("pheno-biofix").textContent = "15-Jul (T0 Latitudinal)";
+                document.getElementById("pheno-pred").textContent = fundo === 'lourdes' ? "DOY 256 (13-Sept)" : fundo === 'qseca' ? "DOY 262 (19-Sept)" : "DOY 258 (15-Sept)";
+            }
+
+            // Maturity
+            const len = data.maturity.brix.length;
+            document.getElementById("mat-brix").textContent = `\${data.maturity.brix[len-1]} °Bx`;
+            document.getElementById("mat-ph").textContent = `\${data.maturity.ph[len-1]}`;
+            document.getElementById("mat-acidez").textContent = `\${data.maturity.acidity[len-1]} g/L`;
+            document.getElementById("mat-peso").textContent = `\${data.maturity.peso[len-1]} g`;
+        }
+
+        // Initialize Charts
+        let chart1, chart2, chart3;
+
+        function initCharts(fundo, variety) {
+            const data = simulationData[fundo][variety];
+
+            // 1. Phenology Chart (GDD Accumulation)
+            chart1 = new Chart(ctxPheno, {
+                type: 'line',
+                data: {
+                    labels: data.pheno.labels,
+                    datasets: [
+                        {
+                            label: 'Temporada 2024-2025 (GDD)',
+                            data: data.pheno.observed,
+                            borderColor: '#34d399',
+                            backgroundColor: 'rgba(52, 211, 153, 0.1)',
+                            fill: true,
+                            tension: 0.1
+                        },
+                        {
+                            label: 'Temporada 2025-2026 (GDD)',
+                            data: data.pheno.observed2,
+                            borderColor: '#60a5fa',
+                            backgroundColor: 'rgba(96, 165, 250, 0.05)',
+                            fill: true,
+                            tension: 0.1
+                        },
+                        {
+                            label: 'Umbral de Brotación',
+                            data: Array(data.pheno.labels.length).fill(data.pheno.threshold),
+                            borderColor: '#6b1d2f',
+                            borderWidth: 2,
+                            borderDash: [5, 5],
+                            fill: false,
+                            pointRadius: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#8b968d' }
+                        },
+                        x: {
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#8b968d' }
+                        }
+                    },
+                    plugins: {
+                        legend: { labels: { color: '#f2f4f2' } }
+                    }
+                }
+            });
+
+            // 2. Maturity Chart
+            chart2 = new Chart(ctxMaturity, {
+                type: 'line',
+                data: {
+                    labels: data.maturity.labels,
+                    datasets: [
+                        {
+                            label: 'Sólidos Solubles (°Brix)',
+                            data: data.maturity.brix,
+                            borderColor: '#ec4899',
+                            yAxisID: 'yBrix',
+                            tension: 0.2
+                        },
+                        {
+                            label: 'Acidez Total (g/L)',
+                            data: data.maturity.acidity,
+                            borderColor: '#f59e0b',
+                            yAxisID: 'yAcidity',
+                            tension: 0.2
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        yBrix: {
+                            type: 'linear',
+                            position: 'left',
+                            title: { display: true, text: '°Brix', color: '#ec4899' },
+                            ticks: { color: '#8b968d' },
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' }
+                        },
+                        yAcidity: {
+                            type: 'linear',
+                            position: 'right',
+                            title: { display: true, text: 'Acidez Total', color: '#f59e0b' },
+                            ticks: { color: '#8b968d' },
+                            grid: { drawOnChartArea: false }
+                        },
+                        x: {
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#8b968d' }
+                        }
+                    },
+                    plugins: {
+                        legend: { labels: { color: '#f2f4f2' } }
+                    }
+                }
+            });
+
+            // 3. WineWise Validation Scatter Plot
+            const scatterPoints = data.winewise.x.map((xVal, index) => ({ x: xVal, y: data.winewise.y[index] }));
+            chart3 = new Chart(ctxWineWise, {
+                type: 'scatter',
+                data: {
+                    datasets: [
+                        {
+                            label: 'Comparación Horaria/Diaria (°C)',
+                            data: scatterPoints,
+                            backgroundColor: '#3b82f6',
+                            borderColor: '#60a5fa',
+                            pointRadius: 6
+                        },
+                        {
+                            label: 'Línea de Identidad (1:1)',
+                            data: [{x: 8, y: 8}, {x: 25, y: 25}],
+                            type: 'line',
+                            borderColor: '#8b968d',
+                            borderWidth: 1,
+                            borderDash: [3, 3],
+                            pointRadius: 0,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            title: { display: true, text: 'Temperatura Estación Local (°C)', color: '#f2f4f2' },
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#8b968d' }
+                        },
+                        x: {
+                            title: { display: true, text: 'Temperatura ERA5-Land (°C)', color: '#f2f4f2' },
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#8b968d' }
+                        }
+                    },
+                    plugins: {
+                        legend: { labels: { color: '#f2f4f2' } }
+                    }
+                }
+            });
+        }
+
+        // Update charts when selectors change
+        function updateCharts() {
+            const fundo = fundoSelect.value;
+            const variety = varietySelect.value;
+            
+            const data = simulationData[fundo][variety];
+            
+            // Update GDD Chart
+            chart1.data.datasets[0].data = data.pheno.observed;
+            chart1.data.datasets[1].data = data.pheno.observed2;
+            chart1.data.datasets[2].data = Array(data.pheno.labels.length).fill(data.pheno.threshold);
+            chart1.update();
+
+            // Update Maturity Chart
+            chart2.data.datasets[0].data = data.maturity.brix;
+            chart2.data.datasets[1].data = data.maturity.acidity;
+            chart2.update();
+
+            // Update WineWise Chart
+            const scatterPoints = data.winewise.x.map((xVal, index) => ({ x: xVal, y: data.winewise.y[index] }));
+            chart3.data.datasets[0].data = scatterPoints;
+            chart3.update();
+
+            updateStats(fundo, variety);
+        }
+
+        fundoSelect.addEventListener("change", updateCharts);
+        varietySelect.addEventListener("change", updateCharts);
+
+        // Run
+        updateStats("lourdes", "cs");
+        initCharts("lourdes", "cs");
+    </script>
+</body>
+</html>

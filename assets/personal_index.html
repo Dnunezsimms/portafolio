@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice Visual de Fotos Personales — Diego Núñez Simms</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b0e0c;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.08);
+            --text: #f2f4f2;
+            --text-muted: #8b968d;
+            --accent: #ec4899;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            padding: 3rem 2rem;
+        }
+        header {
+            max-width: 1200px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        p { color: var(--text-muted); font-size: 1.1rem; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .photo-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .photo-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            background-color: #000;
+        }
+        .photo-name {
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: var(--accent);
+            word-break: break-all;
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Índice de Fotos Personales</h1>
+        <p>Abre esta página en <a href="http://localhost:8000/assets/personal_index.html" style="color: var(--accent); text-decoration: underline;" target="_blank">http://localhost:8000/assets/personal_index.html</a> para identificar las imágenes.</p>
+    </header>
+    <div class="grid">
+        <!-- 1 -->
+        <div class="photo-card">
+            <img src="images/personal/1755201844778.png" alt="photo">
+            <span class="photo-name">1755201844778.png</span>
+        </div>
+        <!-- 2 -->
+        <div class="photo-card">
+            <img src="images/personal/1759584982432.jfif" alt="photo">
+            <span class="photo-name">1759584982432.jfif</span>
+        </div>
+        <!-- 3 -->
+        <div class="photo-card">
+            <img src="images/personal/1759584987381.jfif" alt="photo">
+            <span class="photo-name">1759584987381.jfif</span>
+        </div>
+        <!-- 4 -->
+        <div class="photo-card">
+            <img src="images/personal/1764941495581.jfif" alt="photo">
+            <span class="photo-name">1764941495581.jfif</span>
+        </div>
+        <!-- 5 -->
+        <div class="photo-card">
+            <img src="images/personal/1764941495618.jfif" alt="photo">
+            <span class="photo-name">1764941495618.jfif</span>
+        </div>
+        <!-- 6 -->
+        <div class="photo-card">
+            <img src="images/personal/1764941499590.jfif" alt="photo">
+            <span class="photo-name">1764941499590.jfif</span>
+        </div>
+        <!-- 7 -->
+        <div class="photo-card">
+            <img src="images/personal/1779912438702.jfif" alt="photo">
+            <span class="photo-name">1779912438702.jfif</span>
+        </div>
+        <!-- 8 -->
+        <div class="photo-card">
+            <img src="images/personal/1779912439643.jfif" alt="photo">
+            <span class="photo-name">1779912439643.jfif</span>
+        </div>
+        <!-- 9 -->
+        <div class="photo-card">
+            <img src="images/personal/1779912440202.jfif" alt="photo">
+            <span class="photo-name">1779912440202.jfif</span>
+        </div>
+        <!-- 10 -->
+        <div class="photo-card">
+            <img src="images/personal/1779912440639.jfif" alt="photo">
+            <span class="photo-name">1779912440639.jfif</span>
+        </div>
+        <!-- 11 -->
+        <div class="photo-card">
+            <img src="images/personal/PXL_20250131_115909445.jpg" alt="photo">
+            <span class="photo-name">PXL_20250131_115909445.jpg</span>
+        </div>
+        <!-- 12 -->
+        <div class="photo-card">
+            <img src="images/personal/WhatsApp Image 2026-07-07 at 11.29.08 (1).jpeg" alt="photo">
+            <span class="photo-name">WhatsApp Image 2026-07-07 at 11.29.08 (1).jpeg</span>
+        </div>
+        <!-- 13 -->
+        <div class="photo-card">
+            <img src="images/personal/WhatsApp Image 2026-07-07 at 11.29.08.jpeg" alt="photo">
+            <span class="photo-name">WhatsApp Image 2026-07-07 at 11.29.08.jpeg</span>
+        </div>
+        <!-- 14 -->
+        <div class="photo-card">
+            <img src="images/personal/WhatsApp Image 2026-07-07 at 11.29.09 (1).jpeg" alt="photo">
+            <span class="photo-name">WhatsApp Image 2026-07-07 at 11.29.09 (1).jpeg</span>
+        </div>
+        <!-- 15 -->
+        <div class="photo-card">
+            <img src="images/personal/WhatsApp Image 2026-07-07 at 11.29.09 (2).jpeg" alt="photo">
+            <span class="photo-name">WhatsApp Image 2026-07-07 at 11.29.09 (2).jpeg</span>
+        </div>
+        <!-- 16 -->
+        <div class="photo-card">
+            <img src="images/personal/WhatsApp Image 2026-07-07 at 11.29.09 (3).jpeg" alt="photo">
+            <span class="photo-name">WhatsApp Image 2026-07-07 at 11.29.09 (3).jpeg</span>
+        </div>
+        <!-- 17 -->
+        <div class="photo-card">
+            <img src="images/personal/WhatsApp Image 2026-07-07 at 11.29.09 (4).jpeg" alt="photo">
+            <span class="photo-name">WhatsApp Image 2026-07-07 at 11.29.09 (4).jpeg</span>
+        </div>
+        <!-- 18 -->
+        <div class="photo-card">
+            <img src="images/personal/WhatsApp Image 2026-07-07 at 11.29.09.jpeg" alt="photo">
+            <span class="photo-name">WhatsApp Image 2026-07-07 at 11.29.09.jpeg</span>
+        </div>
+    </div>
+</body>
+</html>

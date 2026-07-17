@@ -1,0 +1,22 @@
+# Archivos del Sistema Operativo
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Carpetas de Editores y Herramientas Locales
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Archivos de la Inteligencia Artificial y Bitácoras locales
+*.log
+.agents/
+.system_generated/
+scratch/
+imprs_analysis.md
+walkthrough.md
+task.md

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Núñez Simms | Agricultural Data Scientist & Environmental Engineer</title>
+    <meta name="description" content="Portafolio profesional de Diego Núñez Simms. Especialista en ciencia de datos agrícolas, modelación bioclimática, ecohidrología y pipelines de datos ambientales.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header id="main-header">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-accent">DNS</span>.dev
+            </a>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+                    <li><a href="#specialties" class="nav-link">Especialidades</a></li>
+                    <li><a href="#tech" class="nav-link">Tecnologías</a></li>
+                    <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                    <li><a href="#engineering" class="nav-link">Ingeniería</a></li>
+                    <li><a href="#timeline" class="nav-link">Trayectoria</a></li>
+                    <li><a href="#services" class="nav-link">Servicios</a></li>
+                    <li><a href="#contact" class="nav-link btn-nav-contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Cambiar tema de color" title="Alternar Modo Claro/Oscuro">
+                    <!-- Sun Icon -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <!-- Moon Icon -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button id="mobile-menu-toggle" aria-label="Abrir menú móvil">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero">
+            <div class="hero-bg-gradients">
+                <div class="grad-1"></div>
+                <div class="grad-2"></div>
+            </div>
+            <div class="container hero-content">
+                <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 24px; flex-wrap: wrap;">
+                    <img src="assets/images/personal/1755201844778.png" alt="Diego Núñez Simms" style="width: 105px; height: 105px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
+                    <div>
+                        <div class="hero-tag" style="margin-bottom: 6px;">Ingeniero Agrónomo | Data Scientist & Analyst | Especialista Ambiental</div>
+                        <h1 class="hero-name" style="margin-bottom: 0; font-size: 3.8rem; line-height: 1.1;">Diego Núñez Simms</h1>
+                    </div>
+                </div>
+                <p class="hero-lead">
+                    Ingeniero Agrónomo y Magíster en Gestión de Recursos Naturales. Especializado en análisis de datos ambientales, modelación bioclimática, sistemas de información geográfica (SIG) y gestión de variables ecosistémicas aplicadas a la agricultura y la sustentabilidad.
+                </p>
+                <div class="hero-pill-container">
+                    <span class="hero-pill">🍇 Modelación Bioclimática</span>
+                    <span class="hero-pill">🌲 Ecohidrología</span>
+                    <span class="hero-pill">☁️ Datos de Satélite & ERA5</span>
+                    <span class="hero-pill">🐍 Python Científico</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="assets/documents/CV_Diego_Nunez.pdf" download class="btn btn-secondary flex-btn" id="download-cv-hero">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Descargar CV
+                    </a>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <a href="#about" aria-label="Desplazarse hacia abajo">
+                    <div class="mouse-icon">
+                        <span class="wheel"></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ SECTION -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="grid-2-cols align-center">
+                    <div class="about-text">
+                        <h2 class="section-title">Ciencia de Datos con Rigor Biológico</h2>
+                        <p class="text-large">
+                            Mi trabajo se sitúa en la intersección de la agronomía, las ciencias ecológicas y la ingeniería de software. No considero los datos climáticos o ambientales como meras tablas numéricas; entiendo los procesos físicos y fisiológicos subyacentes.
+                        </p>
+                        <p>
+                            He liderado la consolidación e ingesta de redes climáticas operacionales chilenas (RAN e INIA) y datos satelitales globales (ERA5-Land), aplicando estrictos controles de calidad (QA/QC) y algoritmos de relleno de brechas (gap-filling). 
+                        </p>
+                        <p>
+                            Mi enfoque principal es traducir variables climáticas dinámicas (grados día, porciones de frío, evapotranspiración, déficit de presión de vapor) en modelos predictivos transparentes y explicables que asistan de forma directa decisiones de manejo de recursos e industria.
+                        </p>
+                    </div>
+                    <div class="about-highlights-card">
+                        <div class="about-card-inner glass">
+                            <h3>Evidencia Técnica Consolidada</h3>
+                            <ul class="highlights-list">
+                                <li>
+                                    <span class="stat">CORFO</span>
+                                    <span class="label">Co-desarrollé el modelamiento del Hito de Maduración y Fenología en el proyecto Vendimia 5.0.</span>
+                                </li>
+                                <li>
+                                    <span class="stat">Peer Review</span>
+                                    <span class="label">Manuscrito científico sobre flujos de carbono (NEE) en Fray Jorge actualmente bajo revisión editorial.</span>
+                                </li>
+                                <li>
+                                    <span class="stat">QA/QC</span>
+                                    <span class="label">Pipeline documentado de validación cruzada y testing automatizado para ERA5-Land vs registros locales.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REGISTRO VISUAL / GALERÍA DE TERRENO -->
+        <section id="gallery" class="section-padding" style="padding-top: 0;">
+            <div class="container">
+                <div class="center-text" style="margin-bottom: 40px;">
+                    <h2 class="section-title">Trabajo de Campo & Reconocimientos</h2>
+                    <p class="section-subtitle">Evidencia visual de levantamiento de datos en terreno, soporte instrumental y reconocimientos académicos.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 24px;">
+                    <!-- Photo 1: Concurso Suelos -->
+                    <div class="card glass photo-card" style="padding: 10px; border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+                        <img src="assets/images/personal/1764941495618.jfif" alt="1er lugar concurso de suelos" style="width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 12px;">
+                        <div style="padding: 6px 8px;">
+                            <h4 style="font-family: var(--font-head); font-size: 1.05rem; margin-bottom: 4px;">Descripción de Suelos</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.3;">1er lugar en el Concurso de Reconocimiento y Descripción de Suelos.</p>
+                        </div>
+                    </div>
+                    <!-- Photo 2: Evaluación de Suelos -->
+                    <div class="card glass photo-card" style="padding: 10px; border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+                        <img src="assets/images/personal/image.png" alt="Evaluacion de suelos" style="width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 12px;">
+                        <div style="padding: 6px 8px;">
+                            <h4 style="font-family: var(--font-head); font-size: 1.05rem; margin-bottom: 4px;">Evaluación de Suelos</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.3;">Evaluación física del suelo, estabilidad de agregados y mapeo de carbono.</p>
+                        </div>
+                    </div>
+                    <!-- Photo 3: Trabajo de Campo -->
+                    <div class="card glass photo-card" style="padding: 10px; border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+                        <img src="assets/images/personal/1759584982432.jfif" alt="Trabajo de Campo" style="width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 12px;">
+                        <div style="padding: 6px 8px;">
+                            <h4 style="font-family: var(--font-head); font-size: 1.05rem; margin-bottom: 4px;">Trabajo de Campo</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.3;">Levantamiento de información técnica vegetacional y muestreos de dosel.</p>
+                        </div>
+                    </div>
+                    <!-- Photo 4: Calicatas & Muestreo -->
+                    <div class="card glass photo-card" style="padding: 10px; border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+                        <img src="assets/images/personal/WhatsApp Image 2026-07-07 at 11.29.09 (2).jpeg" alt="Calicata" style="width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 12px;">
+                        <div style="padding: 6px 8px;">
+                            <h4 style="font-family: var(--font-head); font-size: 1.05rem; margin-bottom: 4px;">Calicatas & Muestreo</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.3;">Excavación de calicatas para caracterización y muestreo físico de perfiles.</p>
+                        </div>
+                    </div>
+                    <!-- Photo 5: Sensores -->
+                    <div class="card glass photo-card" style="padding: 10px; border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+                        <img src="assets/images/personal/WhatsApp Image 2026-07-07 at 11.29.08 (1).jpeg" alt="Soporte de sensores" style="width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 12px;">
+                        <div style="padding: 6px 8px;">
+                            <h4 style="font-family: var(--font-head); font-size: 1.05rem; margin-bottom: 4px;">Soporte de Sensores</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.3;">Instalación y mantenimiento de sensores climáticos y equipos meteorológicos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESPECIALIDADES / FORTALEZAS -->
+        <section id="specialties" class="section-padding bg-alt">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Especialidades Profesionales</h2>
+                    <p class="section-subtitle">Capacidades técnicas basadas en el análisis y modelación de datos reales en terreno y laboratorio.</p>
+                </div>
+                <div class="grid-4-cols cards-container">
+                    <!-- Card 1: Machine Learning -->
+                    <div class="card glass spec-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <h3>ML Explicable & XAI</h3>
+                        <p>Ajuste de modelos predictivos (Random Forest, SVR) combinados con análisis de interpretabilidad (SHAP, Permutation Importance) para estimar balances ecológicos y sumideros de carbono (Carbon Sinks).</p>
+                    </div>
+                    <!-- Card 2: Bioclimatología -->
+                    <div class="card glass spec-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h3>Modelación Bioclimática</h3>
+                        <p>Cálculo dinámico de compensación frío-calor (Dynamic Chilling Portions, GDD), biofix fenológicos ajustados por gradiente latitudinal y modelos térmicos acoplados para viticultura.</p>
+                    </div>
+                    <!-- Card 3: Ingesta de datos -->
+                    <div class="card glass spec-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9M8 17l4 4 4-4"/></svg>
+                        </div>
+                        <h3>Pipelines & Lógica MRV</h3>
+                        <p>Ingesta automática de APIs (Agromet, DataVid), cruce espacial de reanálisis ERA5-Land, control de calidad estadístico y auditorías de datos bajo esquemas de Monitoreo, Reporte y Verificación (MRV).</p>
+                    </div>
+                    <!-- Card 4: GIS -->
+                    <div class="card glass spec-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2M2 17 12 22 22 17M2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>GIS & Remoción de Carbono</h3>
+                        <p>Análisis territorial de sumideros de carbono y variables meteorológicas usando Google Earth Engine, Python (GeoPandas, Rasterio) y QGIS, con soporte para mapeo espectral NDVI y cuantificación de biomasa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECNOLOGÍAS SECTION -->
+        <section id="tech" class="section-padding">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Herramientas & Tecnologías</h2>
+                    <p class="section-subtitle">Stack de herramientas utilizadas en la investigación y desarrollo de software científico.</p>
+                </div>
+                <div class="tech-filter-bar">
+                    <button class="tech-filter-btn active" data-category="all">Todas</button>
+                    <button class="tech-filter-btn" data-category="datascience">Ciencia de Datos</button>
+                    <button class="tech-filter-btn" data-category="gis">GIS & Clima</button>
+                    <button class="tech-filter-btn" data-category="dev">Desarrollo & BD</button>
+                </div>
+                <div class="tech-grid" id="tech-container">
+                    <!-- Python -->
+                    <div class="tech-item glass" data-category="datascience">
+                        <div class="tech-name">Python</div>
+                    </div>
+                    <!-- Pandas / NumPy -->
+                    <div class="tech-item glass" data-category="datascience">
+                        <div class="tech-name">Pandas / NumPy</div>
+                    </div>
+                    <!-- Scikit-Learn -->
+                    <div class="tech-item glass" data-category="datascience">
+                        <div class="tech-name">Scikit-Learn</div>
+                    </div>
+                    <!-- PySR (Symbolic Regression) -->
+                    <div class="tech-item glass" data-category="datascience">
+                        <div class="tech-name">PySR (Symbolic Reg.)</div>
+                    </div>
+                    <!-- QGIS -->
+                    <div class="tech-item glass" data-category="gis">
+                        <div class="tech-name">QGIS / ArcGIS</div>
+                    </div>
+                    <!-- Google Earth Engine -->
+                    <div class="tech-item glass" data-category="gis">
+                        <div class="tech-name">Google Earth Engine</div>
+                    </div>
+                    <!-- Geopandas / Rasterio -->
+                    <div class="tech-item glass" data-category="gis">
+                        <div class="tech-name">Geopandas / Rasterio</div>
+                    </div>
+                    <!-- R -->
+                    <div class="tech-item glass" data-category="datascience">
+                        <div class="tech-name">R Language</div>
+                    </div>
+                    <!-- Gradio / Streamlit -->
+                    <div class="tech-item glass" data-category="dev">
+                        <div class="tech-name">Gradio & Streamlit</div>
+                    </div>
+                    <!-- SQLite / SQLAlchemy -->
+                    <div class="tech-item glass" data-category="dev">
+                        <div class="tech-name">SQLite & SQLAlchemy</div>
+                    </div>
+                    <!-- Next.js / TypeScript -->
+                    <div class="tech-item glass" data-category="dev">
+                        <div class="tech-name">Next.js & TS</div>
+                    </div>
+                    <!-- LaTeX / Jinja2 -->
+                    <div class="tech-item glass" data-category="dev">
+                        <div class="tech-name">LaTeX / Jinja2</div>
+                    </div>
+                    <!-- MRV / Carbon Sinks -->
+                    <div class="tech-item glass" data-category="gis">
+                        <div class="tech-name">MRV & Carbon Removal</div>
+                    </div>
+                    <!-- Java -->
+                    <div class="tech-item glass" data-category="dev">
+                        <div class="tech-name">Java</div>
+                    </div>
+                    <!-- Pytest -->
+                    <div class="tech-item glass" data-category="dev">
+                        <div class="tech-name">Pytest</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS DESTACADOS SECTION -->
+        <section id="projects" class="section-padding bg-alt">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Proyectos e Investigación</h2>
+                    <p class="section-subtitle">Evidencia metodológica y código extraído de repositorios activos.</p>
+                </div>
+                
+                <div class="projects-list">
+                    <!-- PROYECTO 1: VENDIMIA 5.0 (CENTERPIECE) -->
+                    <article class="project-featured glass" id="proj-vendimia">
+                        <div class="project-grid">
+                            <div class="project-img-wrapper">
+                                <img src="assets/images/vendimia_curva_latitudinal.png" alt="Curva latitudinal de brotación en Cabernet Sauvignon" class="project-thumb">
+                                <div class="badge-featured">Centerpiece</div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">🍇 Ciencia de Datos Agrícola & XAI • Hito CORFO</div>
+                                <h3>Plataforma de Predicción de Maduración & Modelación Bioclimática (Vendimia 5.0)</h3>
+                                <p class="project-desc">
+                                    Desarrollo del marco operativo para fenología, acumulación térmica y maduración técnica de la uva de mesa y vinífera en Chile. Implementa un pipeline de calibración de biofix latitudinales y modelos explicables de IA (Random Forest, PySR) para predecir la madurez física y química de la baya.
+                                </p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="value">Gradio / HTML</span>
+                                        <span class="label">Dashboards</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="value">PySR</span>
+                                        <span class="label">Fórmulas Simbólicas</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="value">LOFO / SHAP</span>
+                                        <span class="label">Explicabilidad</span>
+                                    </div>
+                                </div>
+                                <div class="project-tags">
+                                    <span>Python</span>
+                                    <span>Gradio</span>
+                                    <span>Scikit-Learn</span>
+                                    <span>PySR</span>
+                                    <span>Biofix Latitudinal</span>
+                                    <span>Chill Portions</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn btn-primary open-modal-btn" data-project="vendimia">Ver Detalles & Dashboards</button>
+                                    <a href="assets/dashboards/portal_dashboards.html" class="btn btn-secondary" target="_blank">Abrir Portal HTML</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROYECTO 2: FRAY JORGE FLUXES -->
+                    <article class="project-featured glass" id="proj-frayjorge">
+                        <div class="project-grid">
+                            <div class="project-img-wrapper">
+                                <img src="assets/images/frayjorge_nee_maps.png" alt="Mapas de Net Ecosystem Exchange (NEE) en Bosque Fray Jorge" class="project-thumb">
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">🌲 Monitoreo de Carbono & Lógica MRV • Tesis</div>
+                                <h3>Modelación y MRV de Flujos de Carbono y Agua en Ecosistemas Áridos</h3>
+                                <p class="project-desc">
+                                    Modelación de flujos de Net Ecosystem Exchange (NEE) y evapotranspiración mediante sensores Eddy Covariance e integración con datos satelitales (NDVI). Diseñado como caso de estudio práctico para la estimación y auditoría de sumideros de captura y remoción de carbono (Carbon Removal).
+                                </p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="value">SVR / RF</span>
+                                        <span class="label">Soportes Predictivos</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="value">30m²</span>
+                                        <span class="label">Resolución Pixel</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="value">MRV</span>
+                                        <span class="label">Auditoría Carbono</span>
+                                    </div>
+                                </div>
+                                <div class="project-tags">
+                                    <span>Python</span>
+                                    <span>SVR / ML</span>
+                                    <span>Carbon Removal</span>
+                                    <span>Eddy Covariance</span>
+                                    <span>MRV Systems</span>
+                                    <span>Google Earth Engine</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn btn-primary open-modal-btn" data-project="frayjorge">Ver Evidencia Científica</button>
+                                    <a href="assets/documents/TESIS_Diego_Nunez_Simms.pdf" class="btn btn-secondary" download>Descargar Tesis PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROYECTO 3: WINEWISE-RS -->
+                    <article class="project-featured glass" id="proj-winewise">
+                        <div class="project-grid">
+                            <div class="project-img-wrapper">
+                                <img src="assets/images/winewise_gap_filling_flow.png" alt="Flujograma de QA/QC de datos climáticos y gap-filling" class="project-thumb">
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">☁️ Ingenería de Datos & Validación Climática • Lógica MRV</div>
+                                <h3>Pipeline de QA/QC y Auditoría Climática (Lógica MRV) de ERA5-Land</h3>
+                                <p class="project-desc">
+                                    Pipeline de datos meteorológicos alineado con principios MRV para verificar la precisión del modelo climático global ERA5-Land frente a estaciones locales. Implementa algoritmos de gap-filling y QA/QC estadístico robustecidos por pruebas automatizadas con Pytest.
+                                </p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="value">ERA5 API</span>
+                                        <span class="label">Ingesta Satelital</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="value">YAML</span>
+                                        <span class="label">Configuraciones</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="value">Pytest</span>
+                                        <span class="label">Lógica MRV</span>
+                                    </div>
+                                </div>
+                                <div class="project-tags">
+                                    <span>Python</span>
+                                    <span>YAML Config</span>
+                                    <span>Pytest / QA-QC</span>
+                                    <span>ERA5-Land</span>
+                                    <span>MRV Logic</span>
+                                    <span>Data Auditing</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn btn-primary open-modal-btn" data-project="winewise">Ver Pipeline & QA/QC</button>
+                                    <a href="assets/documents/era5_obj3_short_results.pdf" class="btn btn-secondary" target="_blank">Reporte de Resultados PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRÁCTICAS DE INGENIERÍA SECTION -->
+        <section id="engineering" class="section-padding">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Engineering Practices</h2>
+                    <p class="section-subtitle">Estándares de desarrollo de software aplicados a la reproducibilidad científica.</p>
+                </div>
+                
+                <div class="eng-tabs-container">
+                    <div class="eng-tabs-sidebar">
+                        <button class="eng-tab-btn active" data-tab="modular">Arquitectura Modular</button>
+                        <button class="eng-tab-btn" data-tab="config">Desacoplamiento (YAML)</button>
+                        <button class="eng-tab-btn" data-tab="logging">Logging & Trazabilidad</button>
+                        <button class="eng-tab-btn" data-tab="testing">Testing (Pytest)</button>
+                        <button class="eng-tab-btn" data-tab="integrity">Integridad de Datos</button>
+                    </div>
+                    <div class="eng-tabs-content">
+                        <!-- Modular -->
+                        <div class="eng-tab-panel active" id="panel-modular">
+                            <h3>Arquitectura de Carpetas Limpia</h3>
+                            <p>Los proyectos se estructuran siguiendo pautas profesionales de ingeniería de software para separar el código inmutable del negocio, los scripts de ejecución y las configuraciones:</p>
+                            <ul class="bullet-list">
+                                <li><strong><code>src/</code>:</strong> Módulos de Python empaquetados e inmutables (ej. ingestión, procesamiento y lógica de cálculo).</li>
+                                <li><strong><code>config/</code>:</strong> Archivos dinámicos de parámetros para evitar variables hardcodeadas.</li>
+                                <li><strong><code>scripts/</code>:</strong> Drivers de flujo orquestados secuencialmente (ej. <code>01_inventory.py</code>, <code>02_build_sites.py</code>).</li>
+                                <li><strong><code>tests/</code>:</strong> Suite de validaciones lógicas para verificar que el código funciona tras modificaciones.</li>
+                            </ul>
+                        </div>
+                        <!-- Config -->
+                        <div class="eng-tab-panel" id="panel-config">
+                            <h3>Parámetros Desacoplados</h3>
+                            <p>En el proyecto <strong>WineWise-RS</strong>, toda la asignación de fundos, variables meteorológicas del estudio y directorios locales/remotos se centraliza en archivos de configuración YAML. Esto permite:</p>
+                            <ul class="bullet-list">
+                                <li>Portar el pipeline a otros servidores simplemente modificando <code>config/paths.yaml</code>.</li>
+                                <li>Ajustar variables de estudio (ej. temperaturas máximas, mínimas o radiación) en <code>config/study_config.yaml</code> sin reescribir la lógica de validación.</li>
+                                <li>Evitar brechas de seguridad al separar las llaves de API (guardadas en variables de entorno o archivos <code>.env</code> locales no versionados).</li>
+                            </ul>
+                        </div>
+                        <!-- Logging -->
+                        <div class="eng-tab-panel" id="panel-logging">
+                            <h3>Logging y Trazabilidad en Producción</h3>
+                            <p>Para asegurar que las ingestas de datos desde APIs como DataVid sean auditables, se implementa logging formal en los scripts operacionales:</p>
+                            <ul class="bullet-list">
+                                <li>Registro detallado de llamadas HTTP, reintentos en fallas de conexión y timeouts de servidores climáticos.</li>
+                                <li>Seguimiento de inconsistencias en registros horarios consolidados para auditoría manual.</li>
+                                <li>Logs persistentes estructurados en archivos (ej. <code>dashboard_obj3_integrado.log</code>) con marcas de tiempo y niveles de severidad (INFO, WARNING, ERROR).</li>
+                            </ul>
+                        </div>
+                        <!-- Testing -->
+                        <div class="eng-tab-panel" id="panel-testing">
+                            <h3>Pruebas Unitarias para Algoritmos Críticos</h3>
+                            <p>La precisión de la acumulación térmica y el mapeo de estaciones depende de algoritmos matemáticos que requieren consistencia lógica. Se utiliza <code>pytest</code> para asegurar la exactitud:</p>
+                            <ul class="bullet-list">
+                                <li><strong>Validación de Grilla:</strong> Tests para verificar que las coordenadas lat/lon de ERA5-Land se asocian de forma correcta al pixel más cercano del fundo agrícola.</li>
+                                <li><strong>Integridad de Fórmulas:</strong> Pruebas unitarias sobre el cálculo del biofix de Grados Día (GDD) y porciones de frío invernal.</li>
+                                <li>Evita regresiones de software cuando se optimiza el motor de cálculo matemático.</li>
+                            </ul>
+                        </div>
+                        <!-- Integrity -->
+                        <div class="eng-tab-panel" id="panel-integrity">
+                            <h3>Inmutabilidad de Datos Crudos (QA/QC)</h3>
+                            <p>Un principio fundamental del flujo es el respeto a la verdad científica de las observaciones de campo:</p>
+                            <ul class="bullet-list">
+                                <li>La carpeta <code>data/raw/</code> se trata como una base de datos de solo lectura estricta. Ningún script puede alterarla.</li>
+                                <li>Todo el proceso de relleno de brechas (gap-filling) y filtrado de sensores defectuosos genera nuevos archivos intermedios en <code>data/processed/</code>.</li>
+                                <li>Se documenta la lógica de gap-filling a través de flujogramas explícitos (como <code>gap_filling_decision_flow.png</code>) para mantener transparencia absoluta sobre la manipulación de datos climáticos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HERRAMIENTAS Y AUTOMATIZACIÓN (POSTULAPP) -->
+        <section id="tools" class="section-padding bg-alt">
+            <div class="container">
+                <div class="grid-2-cols align-center">
+                    <div class="tools-intro">
+                        <h2 class="section-title">Herramientas & Productividad</h2>
+                        <p class="text-large">Automatización de flujos de trabajo locales y gestión documental.</p>
+                        <p>
+                            Desarrollo herramientas de uso local orientadas a la automatización de tareas administrativas y operativas de oficina, complementando el análisis científico con soluciones de software integradas.
+                        </p>
+                    </div>
+                    <div class="tools-accordion">
+                        <div class="accordion-item glass">
+                            <button class="accordion-header">
+                                <span>🛠️ PostulApp Ambiental — Gestor de Candidaturas</span>
+                                <span class="accordion-arrow">▼</span>
+                            </button>
+                            <div class="accordion-content">
+                                <p><strong>Propósito:</strong> Un MVP local para analizar ofertas laborales técnicas en medio ambiente y datos, y compilar de forma automática carpetas ordenadas de postulación.</p>
+                                <p><strong>Características de Ingeniería:</strong></p>
+                                <ul class="bullet-list">
+                                    <li>Interfaz interactiva construida en <strong>Streamlit</strong>.</li>
+                                    <li>Modelado de base de datos relacional con <strong>SQLite & SQLAlchemy</strong>.</li>
+                                    <li>Esquemas y validación de tipos mediante <strong>Pydantic</strong>.</li>
+                                    <li>Motor de plantillas en <strong>Jinja2</strong> que renderiza y genera documentos CV y cartas directamente a formato <strong>LaTeX</strong>.</li>
+                                    <li>Compilación en segundo plano a PDF invocando de forma asíncrona a <code>pdflatex</code>.</li>
+                                    <li>Envío automático de confirmaciones por correo configurando servidores SMTP.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRAYECTORIA SECTION (TIMELINE) -->
+        <section id="timeline" class="section-padding">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Educación & Trayectoria</h2>
+                    <p class="section-subtitle">Trayectoria profesional en investigación y soporte agrometeorológico.</p>
+                </div>
+                
+                <div class="timeline-container">
+                    <!-- Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge">2026 - Act.</div>
+                        <div class="timeline-panel glass">
+                            <h4>Asistente de I+D — Datos Ambientales y Productivos</h4>
+                            <div class="timeline-meta">Viña Concha y Toro • Centro de Investigación e Innovación • Talca, Chile</div>
+                            <p>Coordino muestreos técnicos en terreno y consolido la información de clima, fenología y producción agrícola. Desarrollo flujos de QA/QC de datos climáticos y elaboro reportes de sostenibilidad y clima para asistencia en viñedos.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge">2024 - 2026</div>
+                        <div class="timeline-panel glass">
+                            <h4>Investigador de Magíster — Dinámica de Carbono y Agua</h4>
+                            <div class="timeline-meta">Instituto de Ecología y Biodiversidad (IEB) • Universidad de Chile</div>
+                            <p>Análisis de flujos de carbono y agua a partir de mediciones micrometeorológicas por sensores e información satelital. Construcción de reportes de diagnóstico bioclimático hídrico y territorial para la investigación de Bosque Fray Jorge.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge">2025</div>
+                        <div class="timeline-panel glass">
+                            <h4>Asistente de Laboratorio — Carbono de Suelo</h4>
+                            <div class="timeline-meta">Pontificia Universidad Católica de Chile • Lab de Restauración de Suelos</div>
+                            <p>Análisis en laboratorio de muestras de suelos vitivinícolas, enfocándome en estabilidad de agregados y cuantificación de carbono orgánico del suelo. Sistematicé datos de control de calidad y registros técnicos.</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge">2024</div>
+                        <div class="timeline-panel glass">
+                            <h4>Practicante de Investigación — Sustentabilidad Vitivinícola</h4>
+                            <div class="timeline-meta">Universidad de Chile / Viñedos Orgánicos Emiliana</div>
+                            <p>Apoyo técnico de terreno en viñedos orgánicos para el monitoreo de gases de efecto invernadero (GEI) y carbono de suelo. Sistematización de variables para informes de auditoría de sustentabilidad vitivinícola.</p>
+                        </div>
+                    </div>
+                    <!-- Item 5 (Educacion) -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge">Académica</div>
+                        <div class="timeline-panel glass">
+                            <h4>Estudios Profesionales</h4>
+                            <div class="timeline-meta">Universidad de Chile</div>
+                            <ul class="bullet-list-timeline">
+                                <li><strong>Magíster en Gestión de Recursos Naturales</strong> (Facultad de Ciencias Agronómicas).</li>
+                                <li><strong>Ingeniería Agronómica</strong> (Especialidad en Recursos Naturales).</li>
+                                <li><strong>Licenciatura en Ciencias Agropecuarias</strong>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS DE ASESORÍA & CONSULTORÍA -->
+        <section id="services" class="section-padding bg-alt">
+            <div class="container">
+                <div class="center-text" style="margin-bottom: 40px;">
+                    <h2 class="section-title">Servicios de Asesoría & Consultoría</h2>
+                    <p class="section-subtitle">Soluciones analíticas y empíricas a medida para la agricultura de precisión y la gestión ambiental.</p>
+                </div>
+                <div class="grid-4-cols">
+                    <!-- Servicio 1: Bioclimatología -->
+                    <div class="card glass spec-card" style="padding: 24px; border-radius: var(--radius-lg); display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-size: 1.5rem; margin-bottom: 12px;">🍇</div>
+                            <h4 style="font-family: var(--font-head); font-size: 1.15rem; margin-bottom: 8px;">Modelación Bioclimática</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4;">Desarrollo y calibración de modelos térmicos personalizados (GDD, horas y porciones de frío) para predicción de fenología y madurez química.</p>
+                        </div>
+                        <div style="font-size: 0.8rem; color: var(--accent-green); margin-top: 16px; font-weight: 600;">Entregable: Algoritmos customizados y reportes bioclimáticos.</div>
+                    </div>
+                    <!-- Servicio 2: GIS & Satelital -->
+                    <div class="card glass spec-card" style="padding: 24px; border-radius: var(--radius-lg); display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-size: 1.5rem; margin-bottom: 12px;">🗺️</div>
+                            <h4 style="font-family: var(--font-head); font-size: 1.15rem; margin-bottom: 8px;">Análisis Territorial & GIS</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4;">Procesamiento de imágenes satelitales ópticas y de radar (NDVI, SAR Sentinel) para monitoreo vegetacional, balances hídricos y mapeo de biomasa.</p>
+                        </div>
+                        <div style="font-size: 0.8rem; color: var(--accent-green); margin-top: 16px; font-weight: 600;">Entregable: Cartografía digital, mapas interactivos e informes territoriales.</div>
+                    </div>
+                    <!-- Servicio 3: Pipelines & MRV -->
+                    <div class="card glass spec-card" style="padding: 24px; border-radius: var(--radius-lg); display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-size: 1.5rem; margin-bottom: 12px;">☁️</div>
+                            <h4 style="font-family: var(--font-head); font-size: 1.15rem; margin-bottom: 8px;">Pipelines de Datos & MRV</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4;">Diseño de flujos automatizados de QA/QC de datos climáticos, imputación de brechas y verificación de métricas alineadas a lógicas MRV.</p>
+                        </div>
+                        <div style="font-size: 0.8rem; color: var(--accent-green); margin-top: 16px; font-weight: 600;">Entregable: Pipeline reproducible (código en Python) y reportes de calidad.</div>
+                    </div>
+                    <!-- Servicio 4: Terreno & Sensores -->
+                    <div class="card glass spec-card" style="padding: 24px; border-radius: var(--radius-lg); display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-size: 1.5rem; margin-bottom: 12px;">🌱</div>
+                            <h4 style="font-family: var(--font-head); font-size: 1.15rem; margin-bottom: 8px;">Operaciones de Campo</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4;">Apoyo técnico en calicatas, muestreo físico de carbono en suelos, y planificación, calibración y soporte de redes de sensores meteorológicos.</p>
+                        </div>
+                        <div style="font-size: 0.8rem; color: var(--accent-green); margin-top: 16px; font-weight: 600;">Entregable: Muestreos tabulados, diagnóstico de perfil y soporte instrumental.</div>
+                    </div>
+                </div>
+                <!-- Nota de Facturación -->
+                <div style="margin-top: 32px; padding: 16px; border-radius: var(--radius-md); background: rgba(163, 29, 58, 0.08); border: 1px solid rgba(163, 29, 58, 0.2); text-align: center;">
+                    <p style="font-size: 0.9rem; margin: 0; color: var(--text-main); font-family: var(--font-head);">
+                        💼 <strong>Esquema de Trabajo Profesional:</strong> Capacidad inmediata de emisión de <strong>boletas de honorarios profesionales</strong> y <strong>facturas electrónicas de servicios</strong> para empresas, consultoras o particulares en el territorio nacional chileno.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO SECTION -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Contacto & Redes</h2>
+                    <p class="section-subtitle">¿Interesado en consultoría, investigación reproducible o ciencia de datos agrometeorológicos?</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info-panel glass" style="display: flex; flex-direction: column; justify-content: space-between; padding: 24px; border-radius: var(--radius-lg);">
+                        <div>
+                            <h3>Canales Directos</h3>
+                            <div class="contact-method" style="margin-bottom: 16px;">
+                                <span class="label" style="font-weight: 600; color: var(--accent-green); display: block; margin-bottom: 4px;">📍 Ubicación:</span>
+                                <span class="value" style="color: var(--text-main);">Santiago, Chile</span>
+                            </div>
+                            <div class="contact-method" style="margin-bottom: 16px;">
+                                <span class="label" style="font-weight: 600; color: var(--accent-green); display: block; margin-bottom: 4px;">📧 Correo de Contacto:</span>
+                                <span class="value"><a href="mailto:diegonunezsimms@gmail.com" style="color: var(--text-main); text-decoration: underline;">diegonunezsimms@gmail.com</a></span>
+                            </div>
+                            <div class="contact-method" style="margin-bottom: 16px;">
+                                <span class="label" style="font-weight: 600; color: var(--accent-green); display: block; margin-bottom: 4px;">🔗 LinkedIn:</span>
+                                <span class="value"><a href="https://linkedin.com/in/dnunezsimms" target="_blank" style="color: var(--text-main); text-decoration: underline;">linkedin.com/in/dnunezsimms</a></span>
+                            </div>
+                            <div class="contact-method" style="margin-bottom: 16px;">
+                                <span class="label" style="font-weight: 600; color: var(--accent-green); display: block; margin-bottom: 4px;">💻 GitHub:</span>
+                                <span class="value"><a href="https://github.com/diegonunez" target="_blank" style="color: var(--text-main); text-decoration: underline;">github.com/diegonunez</a></span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                            <a href="https://wa.me/56939058165" target="_blank" class="btn btn-primary flex-btn" style="background-color: #128c7e; border-color: #128c7e; color: white; justify-content: center; width: 100%;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.45 5.489 0 9.952-4.418 9.955-9.853.002-2.632-1.02-5.107-2.88-6.97C16.485 1.918 14.021.895 11.39.893 5.902.893 1.44 5.313 1.437 10.748c-.001 1.517.404 3.01 1.173 4.316l-1.031 3.766 3.906-1.011z"/>
+                                </svg>
+                                Mensaje por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-panel glass" style="padding: 24px; border-radius: var(--radius-lg);">
+                        <h3>Enviar Requerimiento Específico</h3>
+                        <p class="form-help-text" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+                            Selecciona el tipo de requerimiento para construir un correo pre-configurado directamente a <strong>diegonunezsimms@gmail.com</strong>.
+                        </p>
+                        
+                        <form id="mailto-generator-form" style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; flex-direction: column; gap: 4px;">
+                                <label for="contact-name" style="font-size: 0.8rem; font-weight: 600; color: var(--text-main);">Nombre Completo:</label>
+                                <input type="text" id="contact-name" required placeholder="Ej. Juan Pérez" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(0, 0, 0, 0.2); color: var(--text-main); font-size: 0.9rem;">
+                            </div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 4px;">
+                                <label for="contact-company" style="font-size: 0.8rem; font-weight: 600; color: var(--text-main);">Institución o Empresa (Opcional):</label>
+                                <input type="text" id="contact-company" placeholder="Ej. Agrícola Lourdes" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(0, 0, 0, 0.2); color: var(--text-main); font-size: 0.9rem;">
+                            </div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 4px;">
+                                <label for="contact-type" style="font-size: 0.8rem; font-weight: 600; color: var(--text-main);">Tipo de Solicitud:</label>
+                                <select id="contact-type" required style="width: 100%; padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(255, 255, 255, 0.15); background: #121613; color: var(--text-main); font-size: 0.9rem;">
+                                    <option value="cotizacion">Cotización de Asesoría Técnica</option>
+                                    <option value="evaluacion">Evaluación de Trabajo o Proyecto</option>
+                                    <option value="consulta">Consulta Técnica / Duda General</option>
+                                    <option value="contacto">Mensaje General / Saludo</option>
+                                </select>
+                            </div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 4px;">
+                                <label for="contact-message" style="font-size: 0.8rem; font-weight: 600; color: var(--text-main);">Detalle del Requerimiento:</label>
+                                <textarea id="contact-message" required rows="4" placeholder="Describe la consulta, plazos o requerimiento..." style="width: 100%; padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(0, 0, 0, 0.2); color: var(--text-main); font-size: 0.9rem; resize: vertical;"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary flex-btn" style="width: 100%; justify-content: center; margin-top: 8px;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                                    <line x1="22" y1="2" x2="11" y2="13"/>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                </svg>
+                                Redactar Correo Pre-configurado
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Diego Núñez Simms. Construido de acuerdo a pautas de trazabilidad científica y rigor de datos.</p>
+            <p class="footer-meta">Vite-React-free Static Single Page Application • Hecho en Chile</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DETALLES DE PROYECTO -->
+    <div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+        <div class="modal-card glass">
+            <button class="modal-close-btn" aria-label="Cerrar modal">×</button>
+            <div class="modal-scroll-body">
+                <div class="modal-header">
+                    <span class="modal-project-meta" id="modal-meta"></span>
+                    <h2 id="modal-title"></h2>
+                    <div class="modal-project-links">
+                        <a href="#" id="modal-dashboard-link" class="btn btn-primary btn-sm flex-btn" target="_blank">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Abrir Dashboard Real
+                        </a>
+                        <a href="#" id="modal-pdf-link" class="btn btn-secondary btn-sm flex-btn" target="_blank">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            Ver PDF Metodología
+                        </a>
+                    </div>
+                </div>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" data-modal-tab="overview">General</button>
+                    <button class="modal-tab-btn" data-modal-tab="visuals">Evidencia Visual</button>
+                    <button class="modal-tab-btn" data-modal-tab="code">Código Destacado</button>
+                    <button class="modal-tab-btn" data-modal-tab="iframe" id="tab-iframe-btn">Visor Interactivo</button>
+                </div>
+
+                <div class="modal-tab-content">
+                    <!-- Overview -->
+                    <div class="modal-tab-panel active" id="m-panel-overview">
+                        <div class="modal-summary-grid">
+                            <div>
+                                <h4>El Problema</h4>
+                                <p id="modal-desc-problem"></p>
+                                <h4>La Solución</h4>
+                                <p id="modal-desc-solution"></p>
+                            </div>
+                            <div class="modal-summary-highlights glass">
+                                <h4>Habilidades & Métricas</h4>
+                                <ul class="highlights-list" id="modal-desc-metrics">
+                                    <!-- Populated dynamically -->
+                                </ul>
+                                <h4>Lecciones Aprendidas</h4>
+                                <p id="modal-desc-lessons" class="text-small"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Visuals -->
+                    <div class="modal-tab-panel" id="m-panel-visuals">
+                        <div class="carousel-container">
+                            <div class="carousel-track-wrapper">
+                                <div class="carousel-track" id="modal-carousel-track">
+                                    <!-- Populated dynamically -->
+                                </div>
+                            </div>
+                            <button class="carousel-btn prev-btn" aria-label="Anterior">&#10094;</button>
+                            <button class="carousel-btn next-btn" aria-label="Siguiente">&#10095;</button>
+                            <div class="carousel-indicators" id="modal-carousel-indicators">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Code -->
+                    <div class="modal-tab-panel" id="m-panel-code">
+                        <h4>Implementación Real Extraída del Repositorio</h4>
+                        <p class="text-small" style="margin-bottom:12px;">Se expone un bloque de código representativo para auditoría técnica de buenas prácticas y robustez lógica.</p>
+                        <div class="code-block-container">
+                            <button class="copy-code-btn">Copiar</button>
+                            <pre><code id="modal-code-display" class="language-python">
+<!-- Code loaded dynamically -->
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Iframe View -->
+                    <div class="modal-tab-panel" id="m-panel-iframe">
+                        <div class="iframe-container-wrapper">
+                            <iframe src="" id="modal-iframe-display" title="Visor interactivo del proyecto"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+</html>
