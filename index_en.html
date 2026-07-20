@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Diego Núñez Simms — Professional Portfolio</title>
+    <meta name="description" content="Professional portfolio of Diego Núñez Simms, Agronomist, Environmental Specialist, and Data Scientist. Specializing in bioclimatic modeling, GIS, and data pipelines.">
+    <meta name="author" content="Diego Núñez Simms">
+    <meta name="keywords" content="Agronomist, Data Analyst, Data Scientist, Environmental Specialist, Bioclimatology, GIS, GEE, Google Earth Engine, Python, Soil Carbon, Chile">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dnunezsimms.github.io/portafolio/">
+    <meta property="og:title" content="Diego Núñez Simms — Professional Portfolio">
+    <meta property="og:description" content="Professional portfolio of Diego Núñez Simms, Agronomist, Environmental Specialist, and Data Scientist.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Vanilla CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header id="main-header">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-accent">DNS</span>.dev
+            </a>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#about" class="nav-link">About Me</a></li>
+                    <li><a href="#specialties" class="nav-link">Specialties</a></li>
+                    <li><a href="#tech" class="nav-link">Technologies</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#engineering" class="nav-link">Engineering</a></li>
+                    <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link btn-nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="index.html" class="lang-switch-btn" title="Traducir a Español" style="font-family: var(--font-head); font-weight: 600; font-size: 0.82rem; color: var(--text-muted); text-decoration: none; padding: 4px 8px; border: 1px solid var(--card-border); border-radius: var(--radius-sm); transition: color var(--transition-fast), border-color var(--transition-fast); margin-right: 8px;">
+                    ES
+                </a>
+                <button id="theme-toggle" aria-label="Toggle color theme" title="Toggle Light/Dark Mode">
+                    <!-- Sun Icon -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <!-- Moon Icon -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button id="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" style="background-image: linear-gradient(to bottom, rgba(11, 14, 12, 0.85), rgba(11, 14, 12, 0.95)), url('assets/images/personal/WhatsApp Image 2026-07-07 at 11.29.09 (3).jpeg'); background-size: cover; background-position: center; background-attachment: fixed;">
+            <div class="hero-bg-gradients">
+                <div class="grad-1"></div>
+                <div class="grad-2"></div>
+            </div>
+            <div class="container hero-content">
+                <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 24px; flex-wrap: wrap;">
+                    <img src="assets/images/personal/1755201844778.png" alt="Diego Núñez Simms" style="width: 105px; height: 105px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
+                    <div>
+                        <div class="hero-tag" style="margin-bottom: 6px;">Agronomist | Data Scientist & Analyst | Environmental Specialist</div>
+                        <h1 class="hero-name" style="margin-bottom: 0; font-size: 3.8rem; line-height: 1.1;">Diego Núñez Simms</h1>
+                    </div>
+                </div>
+                <p class="hero-lead">
+                    Agronomist and Master in Natural Resources Management. Specialized in environmental data analysis, bioclimatic modeling, geographic information systems (GIS), and ecosystem variables management applied to agriculture and sustainability.
+                </p>
+                <div class="hero-pill-container">
+                    <span class="hero-pill">🍇 Bioclimatic Modeling</span>
+                    <span class="hero-pill">🌲 Ecohydrology</span>
+                    <span class="hero-pill">☁️ Satellite & ERA5 Data</span>
+                    <span class="hero-pill">🐍 Scientific Python</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="assets/documents/CV_Diego_Nunez.pdf" download class="btn btn-secondary flex-btn" id="download-cv-hero">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download CV
+                    </a>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <a href="#about" aria-label="Scroll down">
+                    <div class="mouse-icon">
+                        <span class="wheel"></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ SECTION -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Professional profile backed by scientific and operational evidence.</p>
+                </div>
+                
+                <div class="grid-2-cols align-center">
+                    <div class="bio-text">
+                        <p class="text-large">
+                            Agronomist graduated from the University of Chile, holding a Master's degree in Natural Resources Management (Faculty of Agronomic Sciences).
+                        </p>
+                        <p>
+                            My work focuses on solving complex problems at the intersection of agronomy, ecophysiology, and data science. I develop automated workflows for the curation and validation of meteorological variables, crop development modeling, and geospatial data processing.
+                        </p>
+                        <p>
+                            I have participated in critical bioclimatic modeling such as the Maturation and Phenology Milestone in the Vendimia 5.0 project (funded by CORFO) and in the continuous analysis of carbon balances in desert ecosystems using micro-meteorological sensors (Eddy Covariance) and satellite data.
+                        </p>
+                    </div>
+                    
+                    <div class="traits-container">
+                        <div class="trait-card glass">
+                            <h4>Scientific Approach</h4>
+                            <p>I prioritize methodological reproducibility, statistical bias control, and biological grounding in every development.</p>
+                        </div>
+                        <div class="trait-card glass">
+                            <h4>Software Engineering</h4>
+                            <p>I write modular, tested, and documented code in Python and Java, applying immutability and logging principles.</p>
+                        </div>
+                        <div class="trait-card glass">
+                            <h4>Field Operations</h4>
+                            <p>I have direct field experience leading canopy sampling, soil profiling (soil pits), and meteorological sensor maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERÍA DE TERRENO SECTION -->
+        <section id="gallery" class="section-padding bg-alt">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Field Operations & Recognition</h2>
+                    <p class="section-subtitle">Visual evidence of field data collection, instrument support, and academic recognition.</p>
+                </div>
+                
+                <div class="photo-grid">
+                    <!-- Foto 1: Suelos -->
+                    <div class="photo-card glass">
+                        <div class="photo-wrapper">
+                            <img src="assets/images/personal/1764941495618.jfif" alt="1st Place Soil Description Contest">
+                        </div>
+                        <div class="photo-info">
+                            <h4>Soil Description Contest</h4>
+                            <p class="photo-desc">1st place in the Soil Recognition and Description Contest (Individual Competition).</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Foto 2: Evaluacion Suelos -->
+                    <div class="photo-card glass">
+                        <div class="photo-wrapper">
+                            <img src="assets/images/personal/image.png" alt="Soil physical evaluation and carbon mapping">
+                        </div>
+                        <div class="photo-info">
+                            <h4>Soil Evaluation</h4>
+                            <p class="photo-desc">Physical soil assessment, aggregate stability, and soil carbon mapping.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Foto 3: Trabajo Campo (Nueva imagen solicitada antes de calicatas) -->
+                    <div class="photo-card glass">
+                        <div class="photo-wrapper">
+                            <img src="assets/images/personal/1759584982432.jfif" alt="Fieldwork vegetational data collection">
+                        </div>
+                        <div class="photo-info">
+                            <h4>Fieldwork</h4>
+                            <p class="photo-desc">Vegetational technical data collection and canopy sampling.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Foto 4: Calicatas (WhatsApp Image 2) -->
+                    <div class="photo-card glass">
+                        <div class="photo-wrapper">
+                            <img src="assets/images/personal/WhatsApp Image 2026-07-07 at 11.29.09 (2).jpeg" alt="Excavation and soil profile sampling">
+                        </div>
+                        <div class="photo-info">
+                            <h4>Soil Profiling (Soil Pits)</h4>
+                            <p class="photo-desc">Excavation of soil pits for profiling and physical soil sampling.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Foto 5: Sensores (WhatsApp Image 1) -->
+                    <div class="photo-card glass">
+                        <div class="photo-wrapper">
+                            <img src="assets/images/personal/WhatsApp Image 2026-07-07 at 11.29.08 (1).jpeg" alt="Microclimate sensor maintenance in vineyards">
+                        </div>
+                        <div class="photo-info">
+                            <h4>Sensor Support</h4>
+                            <p class="photo-desc">Installation, calibration, and maintenance of microclimate sensors in vineyards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESPECIALIDADES SECTION -->
+        <section id="specialties" class="section-padding">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Professional Specialties</h2>
+                    <p class="section-subtitle">Areas of competence at the intersection of agronomy, technology, and environmental analysis.</p>
+                </div>
+                
+                <div class="grid-3-cols">
+                    <!-- Especialidad 1 -->
+                    <div class="card glass spec-card">
+                        <div class="spec-icon">🍇</div>
+                        <h3>Bioclimatic Modeling & Phenology</h3>
+                        <p>
+                            Calculation of thermal accumulation (GDD) and winter chill portions applying dynamic bioclimatic algorithms. Modeling berry sugar and acidity maturity curves for harvest optimization.
+                        </p>
+                    </div>
+                    
+                    <!-- Especialidad 2 -->
+                    <div class="card glass spec-card">
+                        <div class="spec-icon">🗺️</div>
+                        <h3>Spatial Analysis & GIS (Remote Sensing)</h3>
+                        <p>
+                            Processing of optical and radar satellite imagery (NDVI, Sentinel-1 SAR) for biomass estimation, vegetation indices, and territorial integration via Google Earth Engine.
+                        </p>
+                    </div>
+                    
+                    <!-- Especialidad 3 -->
+                    <div class="card glass spec-card">
+                        <div class="spec-icon">🌲</div>
+                        <h3>Ecohydrology & Carbon Balance (MRV)</h3>
+                        <p>
+                            Modeling carbon fluxes (NEE) and evapotranspiration using Eddy Covariance sensors. Structuring metrics aligned with MRV (Monitoring, Reporting, and Verification) methodologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECNOLOGÍAS SECTION -->
+        <section id="tech" class="section-padding bg-alt">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Tools & Technologies</h2>
+                    <p class="section-subtitle">Technical skills applied in data science, geographic information systems, and development.</p>
+                </div>
+                
+                <!-- Filter buttons -->
+                <div class="tech-filter-bar">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="datascience">Data Science</button>
+                    <button class="filter-btn" data-filter="gis">GIS & Climate</button>
+                    <button class="filter-btn" data-filter="dev">Development & DB</button>
+                </div>
+                
+                <div class="tech-grid" id="tech-container">
+                    <!-- Python -->
+                    <div class="tech-item glass" data-category="datascience">
+                        <div class="tech-name">Python</div>
+                    </div>
+                    <!-- Pandas / NumPy -->
+                    <div class="tech-item glass" data-category="datascience">
+                        <div class="tech-name">Pandas / NumPy</div>
+                    </div>
+                    <!-- Scikit-Learn -->
+                    <div class="tech-item glass" data-category="datascience">
+                        <div class="tech-name">Scikit-Learn</div>
+                    </div>
+                    <!-- PySR (Symbolic Regression) -->
+                    <div class="tech-item glass" data-category="datascience">
+                        <div class="tech-name">PySR (Symbolic Reg.)</div>
+                    </div>
+                    <!-- QGIS -->
+                    <div class="tech-item glass" data-category="gis">
+                        <div class="tech-name">QGIS / ArcGIS</div>
+                    </div>
+                    <!-- Google Earth Engine -->
+                    <div class="tech-item glass" data-category="gis">
+                        <div class="tech-name">Google Earth Engine</div>
+                    </div>
+                    <!-- Geopandas / Rasterio -->
+                    <div class="tech-item glass" data-category="gis">
+                        <div class="tech-name">Geopandas / Rasterio</div>
+                    </div>
+                    <!-- R -->
+                    <div class="tech-item glass" data-category="datascience">
+                        <div class="tech-name">R Language</div>
+                    </div>
+                    <!-- Gradio / Streamlit -->
+                    <div class="tech-item glass" data-category="dev">
+                        <div class="tech-name">Gradio & Streamlit</div>
+                    </div>
+                    <!-- SQLite / SQLAlchemy -->
+                    <div class="tech-item glass" data-category="dev">
+                        <div class="tech-name">SQLite & SQLAlchemy</div>
+                    </div>
+                    <!-- Next.js / TypeScript -->
+                    <div class="tech-item glass" data-category="dev">
+                        <div class="tech-name">Next.js & TS</div>
+                    </div>
+                    <!-- LaTeX / Jinja2 -->
+                    <div class="tech-item glass" data-category="dev">
+                        <div class="tech-name">LaTeX / Jinja2</div>
+                    </div>
+                    <!-- MRV / Carbon Sinks -->
+                    <div class="tech-item glass" data-category="gis">
+                        <div class="tech-name">MRV & Carbon Removal</div>
+                    </div>
+                    <!-- Java -->
+                    <div class="tech-item glass" data-category="dev">
+                        <div class="tech-name">Java</div>
+                    </div>
+                    <!-- Pytest -->
+                    <div class="tech-item glass" data-category="dev">
+                        <div class="tech-name">Pytest</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS DESTACADOS SECTION -->
+        <section id="projects" class="section-padding bg-alt">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Projects & Research</h2>
+                    <p class="section-subtitle">Methodological evidence and code extracted from active repositories.</p>
+                </div>
+                
+                <div class="projects-list">
+                    <!-- PROYECTO 1: VENDIMIA (CENTERPIECE) -->
+                    <article class="project-featured glass" id="proj-vendimia">
+                        <div class="project-grid">
+                            <div class="project-img-wrapper">
+                                <img src="assets/images/vendimia_paneles_gda.png" alt="Growing Degree Days diagnostics panels" class="project-thumb">
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">🍇 Agricultural Data Science & XAI • Centerpiece</div>
+                                <h3>Bioclimatic Modeling & Berry Chemical Ripening Prediction</h3>
+                                <p class="project-desc">
+                                    Development of seasonal thermal modeling, implementing a latitudinal biofix algorithm blind to budburst observations to eliminate leakage bias. Ripening curves modeling (°Brix, pH, and acidity) using Random Forest and Symbolic Regression (PySR).
+                                </p>
+                                <div class="project-pills">
+                                    <span class="pill-tech">Latitudinal Biofix</span>
+                                    <span class="pill-tech">Chill Portions</span>
+                                    <span class="pill-tech">Maturity Curves</span>
+                                    <span class="pill-tech">Symbolic Regression</span>
+                                    <span class="pill-tech">NSGA-II Optimization</span>
+                                    <span class="pill-tech">Python</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn btn-primary open-modal-btn" data-project="vendimia">View Scientific Evidence</button>
+                                    <a href="assets/documents/Metodologia_GDD_latitud.pdf" class="btn btn-secondary" download>GDD Methodology PDF</a>
+                                    <a href="assets/documents/Postulacion_proyecto_vendimia_5.0-CORFO.pdf" class="btn btn-secondary" download>CORFO Application PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROYECTO 2: FRAY JORGE -->
+                    <article class="project-featured glass" id="proj-frayjorge">
+                        <div class="project-grid">
+                            <div class="project-img-wrapper">
+                                <img src="assets/images/frayjorge_nee_curves.png" alt="Accumulated NEE carbon curves" class="project-thumb">
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">🌲 Carbon Monitoring & MRV Logic • Thesis</div>
+                                <h3>Modeling and MRV of Carbon and Water Fluxes in Arid Ecosystems</h3>
+                                <p class="project-desc">
+                                    Modeling of Net Ecosystem Exchange (NEE) and evapotranspiration fluxes using Eddy Covariance sensors and integration with satellite data (NDVI). Designed as a practical case study for the estimation and auditing of carbon removal sinks.
+                                </p>
+                                <div class="project-pills">
+                                    <span class="pill-tech">SVR / ML</span>
+                                    <span class="pill-tech">Carbon Removal</span>
+                                    <span class="pill-tech">Eddy Covariance</span>
+                                    <span class="pill-tech">MRV Systems</span>
+                                    <span class="pill-tech">Google Earth Engine</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn btn-primary open-modal-btn" data-project="frayjorge">View Scientific Evidence</button>
+                                    <a href="assets/documents/TESIS_Diego_Nunez_Simms.pdf?v=final" class="btn btn-secondary" download>Download Thesis PDF (Spanish)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROYECTO 3: WINEWISE-RS -->
+                    <article class="project-featured glass" id="proj-winewise">
+                        <div class="project-grid">
+                            <div class="project-img-wrapper">
+                                <img src="assets/images/winewise_gap_filling_flow.png" alt="QA/QC and gap-filling decision flow" class="project-thumb">
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">☁  Data Engineering & Climate Validation • MRV Logic</div>
+                                <h3>QA/QC Pipeline & Climate Auditing (MRV Logic) of ERA5-Land</h3>
+                                <p class="project-desc">
+                                    Meteorological data pipeline aligned with MRV principles to verify the accuracy of the global ERA5-Land climate model against local weather stations. Implements gap-filling and statistical QA/QC algorithms robustified by automated tests with Pytest.
+                                </p>
+                                <div class="project-pills">
+                                    <span class="pill-tech">ERA5 API</span>
+                                    <span class="pill-tech">Climate QA/QC</span>
+                                    <span class="pill-tech">Gap-Filling</span>
+                                    <span class="pill-tech">Pytest Validation</span>
+                                    <span class="pill-tech">YAML Config</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn btn-primary open-modal-btn" data-project="winewise">View Scientific Evidence</button>
+                                    <a href="assets/documents/era5_obj3_short_results.pdf" class="btn btn-secondary" download>ERA5 Results PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENGINEERING PRACTICES SECTION -->
+        <section id="engineering" class="section-padding">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Engineering Practices</h2>
+                    <p class="section-subtitle">Methodological and development standards applied to all my projects.</p>
+                </div>
+                
+                <div class="engineering-layout">
+                    <div class="eng-tabs-nav">
+                        <button class="eng-tab-btn active" data-target="panel-modular">📦 Modular Codebase</button>
+                        <button class="eng-tab-btn" data-target="panel-config">🔧 Config (YAML)</button>
+                        <button class="eng-tab-btn" data-target="panel-logging">📝 Traceability & Logging</button>
+                        <button class="eng-tab-btn" data-target="panel-testing">🧪 Testing (Pytest)</button>
+                        <button class="eng-tab-btn" data-target="panel-integrity">🔒 Data Integrity</button>
+                    </div>
+                    
+                    <div class="eng-tabs-content">
+                        <!-- Modular -->
+                        <div class="eng-tab-panel active" id="panel-modular">
+                            <h3>Clean Folder Architecture</h3>
+                            <p>Projects are structured following professional software engineering guidelines to separate immutable business logic from execution scripts and configurations:</p>
+                            <ul class="bullet-list">
+                                <li><strong><code>src/</code>:</strong> Packaged and immutable Python modules (e.g., ingestion, processing, and calculation logic).</li>
+                                <li><strong><code>config/</code>:</strong> Dynamic parameter files to avoid hardcoded variables.</li>
+                                <li><strong><code>scripts/</code>:</strong> Sequentially orchestrated driver flows (e.g., <code>01_inventory.py</code>, <code>02_build_sites.py</code>).</li>
+                                <li><strong><code>tests/</code>:</strong> Suite of logical validations to verify code functionality after modifications.</li>
+                            </ul>
+                        </div>
+                        <!-- Config -->
+                        <div class="eng-tab-panel" id="panel-config">
+                            <h3>Decoupled Parameters</h3>
+                            <p>In the WineWise-RS project, all vineyard assignments, meteorological study variables, and local/remote directories are centralized in YAML configuration files. This allows:</p>
+                            <ul class="bullet-list">
+                                <li>Porting the pipeline to other servers simply by modifying <code>config/paths.yaml</code>.</li>
+                                <li>Adjusting study variables (e.g., maximum/minimum temperatures or radiation) in <code>config/study_config.yaml</code> without rewriting the validation logic.</li>
+                                <li>Preventing security gaps by separating API keys (stored in environment variables or unversioned local <code>.env</code> files).</li>
+                            </ul>
+                        </div>
+                        <!-- Logging -->
+                        <div class="eng-tab-panel" id="panel-logging">
+                            <h3>Logging & Production Traceability</h3>
+                            <p>To ensure that data ingestions from APIs like DataVid are auditable, formal logging is implemented in operational scripts:</p>
+                            <ul class="bullet-list">
+                                <li>Detailed log of HTTP calls, retries on connection failures, and weather server timeouts.</li>
+                                <li>Tracking inconsistencies in consolidated hourly logs for manual audit.</li>
+                                <li>Persistent logs structured in files (e.g., <code>dashboard_obj3_integrado.log</code>) with timestamps and severity levels (INFO, WARNING, ERROR).</li>
+                            </ul>
+                        </div>
+                        <!-- Testing -->
+                        <div class="eng-tab-panel" id="panel-testing">
+                            <h3>Unit Testing for Critical Algorithms</h3>
+                            <p>The accuracy of thermal accumulation and station mapping depends on mathematical algorithms that require logical consistency. Pytest is used to ensure exactness:</p>
+                            <ul class="bullet-list">
+                                <li><strong>Grid Validation:</strong> Tests to verify that ERA5-Land lat/lon coordinates are correctly associated with the nearest vineyard pixel.</li>
+                                <li><strong>Formula Integrity:</strong> Unit tests on Growing Degree Days (GDD) biofix calculation and winter chill portions.</li>
+                                <li>Prevents software regressions when optimizing the mathematical calculation engine.</li>
+                            </ul>
+                        </div>
+                        <!-- Integrity -->
+                        <div class="eng-tab-panel" id="panel-integrity">
+                            <h3>Raw Data Immutability (QA/QC)</h3>
+                            <p>A fundamental principle of the workflow is respect for the scientific truth of field observations:</p>
+                            <ul class="bullet-list">
+                                <li>The <code>data/raw/</code> directory is treated as a strict read-only database. No script can alter it.</li>
+                                <li>The entire gap-filling process and filtering of faulty sensors generate new intermediate files in <code>data/processed/</code>.</li>
+                                <li>The gap-filling logic is documented through explicit flowcharts (such as <code>gap_filling_decision_flow.png</code>) to maintain absolute transparency on climate data manipulation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HERRAMIENTAS Y AUTOMATIZACIÓN (POSTULAPP) -->
+        <section id="tools" class="section-padding bg-alt">
+            <div class="container">
+                <div class="grid-2-cols align-center">
+                    <div class="tools-intro">
+                        <h2 class="section-title">Tools & Productivity</h2>
+                        <p class="text-large">Local workflow automation and document management.</p>
+                        <p>
+                            I develop local tools focused on the automation of administrative and operational office tasks, complementing scientific analysis with integrated software solutions.
+                        </p>
+                    </div>
+                    <div class="tools-accordion">
+                        <div class="accordion-item glass">
+                            <button class="accordion-header">
+                                <span>🛠️ PostulApp Ambiental — Application Manager</span>
+                                <span class="accordion-arrow">▼</span>
+                            </button>
+                            <div class="accordion-content">
+                                <p><strong>Purpose:</strong> A local MVP to analyze technical job offers in environmental fields and data science, automatically compiling organized job application folders.</p>
+                                <p><strong>Engineering Features:</strong></p>
+                                <ul class="bullet-list">
+                                    <li>Interactive user interface built in <strong>Streamlit</strong>.</li>
+                                    <li>Relational database modeling with <strong>SQLite & SQLAlchemy</strong>.</li>
+                                    <li>Schemas and data validation using <strong>Pydantic</strong>.</li>
+                                    <li>Jinja2 template engine that renders and generates CV and cover letter documents directly into <strong>LaTeX</strong> format.</li>
+                                    <li>Background PDF compilation by asynchronously invoking <code>pdflatex</code>.</li>
+                                    <li>Automatic email confirmations by configuring SMTP servers.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE SECTION -->
+        <section id="timeline" class="section-padding">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Professional & Academic Timeline</h2>
+                    <p class="section-subtitle">Chronological order of my education and work experience.</p>
+                </div>
+                
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-panel glass">
+                            <h4>Agroclimatic & Environmental Data Engineer</h4>
+                            <div class="timeline-meta">2024 - Present • Independent Consultant</div>
+                            <ul class="bullet-list-timeline">
+                                <li>Bioclimatic modeling and spatial analysis for agricultural and conservation projects.</li>
+                                <li>Development of automated QA/QC pipelines for meteorological and satellite data.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-panel glass">
+                            <h4>Agroclimatic Data Analyst (CORFO Project)</h4>
+                            <div class="timeline-meta">2024 - 2025 • Viña Concha y Toro</div>
+                            <ul class="bullet-list-timeline">
+                                <li>Unification of the RAN/INIA climatological network and quality control of climate databases.</li>
+                                <li>Modeling of chill portions and GDD accumulation for budburst and ripening predictions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-panel glass">
+                            <h4>Professional Studies</h4>
+                            <div class="timeline-meta">Universidad de Chile</div>
+                            <ul class="bullet-list-timeline">
+                                <li><strong>Master's in Natural Resources Management</strong> (Faculty of Agronomic Sciences).</li>
+                                <li><strong>Agronomy Engineering</strong> (Natural Resources Specialty).</li>
+                                <li><strong>Bachelor's in Agricultural Sciences</strong>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS DE ASESORÍA & CONSULTORÍA -->
+        <section id="services" class="section-padding bg-alt">
+            <div class="container">
+                <div class="center-text" style="margin-bottom: 40px;">
+                    <h2 class="section-title">Technical Consulting & Advisory Services</h2>
+                    <p class="section-subtitle">Tailored analytical and empirical solutions for precision agriculture and environmental management.</p>
+                </div>
+                <div class="grid-4-cols">
+                    <!-- Servicio 1: Bioclimatología -->
+                    <div class="card glass spec-card" style="padding: 24px; border-radius: var(--radius-lg); display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-size: 1.5rem; margin-bottom: 12px;">🍇</div>
+                            <h4 style="font-family: var(--font-head); font-size: 1.15rem; margin-bottom: 8px;">Bioclimatic Modeling</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4;">Development and calibration of custom thermal models (GDD, hours, and chill portions) for phenology and chemical maturity prediction.</p>
+                        </div>
+                        <div style="font-size: 0.8rem; color: var(--accent-green); margin-top: 16px; font-weight: 600;">Deliverable: Customized algorithms and bioclimatic reports.</div>
+                    </div>
+                    <!-- Servicio 2: GIS & Satelital -->
+                    <div class="card glass spec-card" style="padding: 24px; border-radius: var(--radius-lg); display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-size: 1.5rem; margin-bottom: 12px;">🗺️</div>
+                            <h4 style="font-family: var(--font-head); font-size: 1.15rem; margin-bottom: 8px;">Territorial Analysis & GIS</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4;">Processing of optical and radar satellite imagery (NDVI, Sentinel SAR) for crop monitoring, water balances, and biomass mapping.</p>
+                        </div>
+                        <div style="font-size: 0.8rem; color: var(--accent-green); margin-top: 16px; font-weight: 600;">Deliverable: Digital cartography, interactive maps, and territorial reports.</div>
+                    </div>
+                    <!-- Servicio 3: Pipelines & MRV -->
+                    <div class="card glass spec-card" style="padding: 24px; border-radius: var(--radius-lg); display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-size: 1.5rem; margin-bottom: 12px;">☁️</div>
+                            <h4 style="font-family: var(--font-head); font-size: 1.15rem; margin-bottom: 8px;">Data Pipelines & MRV</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4;">Design of automated climate data QA/QC pipelines, gap imputation, and metric verification aligned with MRV principles.</p>
+                        </div>
+                        <div style="font-size: 0.8rem; color: var(--accent-green); margin-top: 16px; font-weight: 600;">Deliverable: Reproducible pipeline (Python code) and quality reports.</div>
+                    </div>
+                    <!-- Servicio 4: Terreno & Sensores -->
+                    <div class="card glass spec-card" style="padding: 24px; border-radius: var(--radius-lg); display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-size: 1.5rem; margin-bottom: 12px;">🌱</div>
+                            <h4 style="font-family: var(--font-head); font-size: 1.15rem; margin-bottom: 8px;">Field Operations</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4;">Technical support for soil pits, physical soil carbon sampling, and planning, calibration, and support of weather sensor networks.</p>
+                        </div>
+                        <div style="font-size: 0.8rem; color: var(--accent-green); margin-top: 16px; font-weight: 600;">Deliverable: Tabulated samples, soil profile diagnosis, and instrument support.</div>
+                    </div>
+                </div>
+                <!-- Nota de Facturación -->
+                <div style="margin-top: 32px; padding: 16px; border-radius: var(--radius-md); background: rgba(163, 29, 58, 0.08); border: 1px solid rgba(163, 29, 58, 0.2); text-align: center;">
+                    <p style="font-size: 0.9rem; margin: 0; color: var(--text-main); font-family: var(--font-head);">
+                        💼 <strong>Professional Business Framework:</strong> Immediate capacity to issue professional fees receipts (Boletas de Honorarios) and corporate invoices (Facturas) for companies, consultancies, or individuals within Chile.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO SECTION -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="center-text">
+                    <h2 class="section-title">Contact & Socials</h2>
+                    <p class="section-subtitle">Interested in consulting, reproducible research, or agro-meteorological data science?</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info-panel glass" style="display: flex; flex-direction: column; justify-content: space-between; padding: 24px; border-radius: var(--radius-lg);">
+                        <div>
+                            <h3>Direct Channels</h3>
+                            <div class="contact-method" style="margin-bottom: 16px;">
+                                <span class="label" style="font-weight: 600; color: var(--accent-green); display: block; margin-bottom: 4px;">📍 Location:</span>
+                                <span class="value" style="color: var(--text-main);">Santiago, Chile</span>
+                            </div>
+                            <div class="contact-method" style="margin-bottom: 16px;">
+                                <span class="label" style="font-weight: 600; color: var(--accent-green); display: block; margin-bottom: 4px;">📧 Contact Email:</span>
+                                <span class="value"><a href="mailto:diegonunezsimms@gmail.com" style="color: var(--text-main); text-decoration: underline;">diegonunezsimms@gmail.com</a></span>
+                            </div>
+                            <div class="contact-method" style="margin-bottom: 16px;">
+                                <span class="label" style="font-weight: 600; color: var(--accent-green); display: block; margin-bottom: 4px;">🔗 LinkedIn:</span>
+                                <span class="value"><a href="https://linkedin.com/in/dnunezsimms" target="_blank" style="color: var(--text-main); text-decoration: underline;">linkedin.com/in/dnunezsimms</a></span>
+                            </div>
+                            <div class="contact-method" style="margin-bottom: 16px;">
+                                <span class="label" style="font-weight: 600; color: var(--accent-green); display: block; margin-bottom: 4px;">💻 GitHub:</span>
+                                <span class="value"><a href="https://github.com/diegonunez" target="_blank" style="color: var(--text-main); text-decoration: underline;">github.com/diegonunez</a></span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                            <a href="https://wa.me/56939058165" target="_blank" class="btn btn-primary flex-btn" style="background-color: #128c7e; border-color: #128c7e; color: white; justify-content: center; width: 100%;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.45 5.489 0 9.952-4.418 9.955-9.853.002-2.632-1.02-5.107-2.88-6.97C16.485 1.918 14.021.895 11.39.893 5.902.893 1.44 5.313 1.437 10.748c-.001 1.517.404 3.01 1.173 4.316l-1.031 3.766 3.906-1.011z"/>
+                                </svg>
+                                Message on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-panel glass" style="padding: 24px; border-radius: var(--radius-lg);">
+                        <h3>Submit Specific Request</h3>
+                        <p class="form-help-text" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+                            Select the request type to construct a pre-configured email directly to <strong>diegonunezsimms@gmail.com</strong>.
+                        </p>
+                        
+                        <form id="mailto-generator-form" style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; flex-direction: column; gap: 4px;">
+                                <label for="contact-name" style="font-size: 0.8rem; font-weight: 600; color: var(--text-main);">Full Name:</label>
+                                <input type="text" id="contact-name" required placeholder="e.g. John Doe" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(0, 0, 0, 0.2); color: var(--text-main); font-size: 0.9rem;">
+                            </div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 4px;">
+                                <label for="contact-company" style="font-size: 0.8rem; font-weight: 600; color: var(--text-main);">Institution or Company (Optional):</label>
+                                <input type="text" id="contact-company" placeholder="e.g. Lourdes Vineyard" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(0, 0, 0, 0.2); color: var(--text-main); font-size: 0.9rem;">
+                            </div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 4px;">
+                                <label for="contact-type" style="font-size: 0.8rem; font-weight: 600; color: var(--text-main);">Request Type:</label>
+                                <select id="contact-type" required style="width: 100%; padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(255, 255, 255, 0.15); background: #121613; color: var(--text-main); font-size: 0.9rem;">
+                                    <option value="cotizacion">Technical Consulting Quote</option>
+                                    <option value="evaluacion">Project or Work Evaluation</option>
+                                    <option value="consulta">Technical Inquiry / General Question</option>
+                                    <option value="contacto">General Message / Hello</option>
+                                </select>
+                            </div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 4px;">
+                                <label for="contact-message" style="font-size: 0.8rem; font-weight: 600; color: var(--text-main);">Request Details:</label>
+                                <textarea id="contact-message" required rows="4" placeholder="Describe your inquiry, deadlines, or requirements..." style="width: 100%; padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(0, 0, 0, 0.2); color: var(--text-main); font-size: 0.9rem; resize: vertical;"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary flex-btn" style="width: 100%; justify-content: center; margin-top: 8px;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                                    <line x1="22" y1="2" x2="11" y2="13"/>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                </svg>
+                                Generate Pre-Configured Email
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Diego Núñez Simms. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#about">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE DETAIL MODAL -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-card glass">
+            <button class="modal-close-btn" id="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="modal-meta" id="modal-meta">Project Category</span>
+                <h2 id="modal-title">Project Title</h2>
+            </div>
+            
+            <div class="modal-body-grid">
+                <!-- Left panel: Text and details -->
+                <div class="modal-details-panel">
+                    <div class="detail-section">
+                        <h3>Problem / Context</h3>
+                        <p id="modal-problem">Problem description goes here...</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Methodological Solution</h3>
+                        <p id="modal-solution">Solution description goes here...</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Impact & Metrics</h3>
+                        <ul class="bullet-list" id="modal-metrics">
+                            <!-- Injected dynamically -->
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Lessons Learned</h3>
+                        <p id="modal-lessons">Lessons description...</p>
+                    </div>
+                    <div class="modal-download-actions" id="modal-downloads">
+                        <!-- Dynamic download buttons -->
+                    </div>
+                </div>
+                
+                <!-- Right panel: Interactive components, charts, and code -->
+                <div class="modal-visuals-panel">
+                    <!-- Dashboard iframe sandbox -->
+                    <div class="dashboard-sandbox-card" id="modal-sandbox-container">
+                        <h3>Interactive Sandboxed Dashboard</h3>
+                        <div class="iframe-wrapper">
+                            <iframe id="modal-sandbox-iframe" src="" title="Sandboxed Dashboard View" loading="lazy"></iframe>
+                        </div>
+                        <p class="sandbox-disclaimer">ℹ️ Live simulation with simulated metrics to guarantee confidentiality policies.</p>
+                    </div>
+                    
+                    <!-- Code viewer -->
+                    <div class="code-viewer-card">
+                        <h3>Key Mathematical Algorithm (Source Code)</h3>
+                        <pre><code class="language-python" id="modal-code-snippet"># Code block</code></pre>
+                    </div>
+                    
+                    <!-- Visual gallery (carousel) -->
+                    <div class="visual-gallery-card" id="modal-carousel-container">
+                        <h3>Scientific Evidence & Diagrams</h3>
+                        <div class="carousel-viewport">
+                            <div class="carousel-track" id="modal-carousel-track">
+                                <!-- Slides injected dynamically -->
+                            </div>
+                        </div>
+                        <div class="carousel-controls" id="modal-carousel-controls">
+                            <button class="carousel-nav-btn prev" id="carousel-prev" aria-label="Previous image">&#10094;</button>
+                            <div class="carousel-indicators" id="modal-carousel-indicators">
+                                <!-- Dots injected dynamically -->
+                            </div>
+                            <button class="carousel-nav-btn next" id="carousel-next" aria-label="Next image">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- App JavaScript Modules -->
+    <script src="app.js"></script>
+
+</body>
+</html>
